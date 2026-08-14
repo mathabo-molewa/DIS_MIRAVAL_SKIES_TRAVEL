@@ -17,12 +17,14 @@ The website has 5 pages (home, about us, enquiry, contact us and services). Each
 
 ## Timeline
 
-start-30 July 2026
-Ice task one(Proposal sent)-5 August 2026
-Ice task two(Github URL sent)-8 August 2026
-Part one-14 August 2026
+start - 30 July 2026
+Ice task one(Proposal sent) - 5 August 2026
+Ice task two(Github URL sent) - 8 August 2026
+Research - 12 August 2026
+Finish coding all 5 pages - 14 August 2026
+Part one - 14 August 2026
 
-##Sitemap
+## Sitemap
 
 -Home
 -About us
@@ -31,14 +33,17 @@ Part one-14 August 2026
 -Services
 
 ## Changelog
-Created the structure on Visual studio code
-Create a repository for the website
-Added a home page
-Added an about us page
-Added a contact us page
-Added an equiry page
-Added a services page
-Connect the pages by adding a navigation
+Created the structure on Visual studio code - 01 August 2026
+Create a repository for the website - 02 August 2026
+Added a home page - 03 August 2026
+Added an about us page - 03 August 2026
+Added a contact us page - 03 August 2026
+Added an equiry page - 06 August 2026
+Connect the pages by adding a navigation - 06 august 2026
+Added a services page - 10 August 2026
+Added pictures to Travel package - 13 August 2026
+Finish coding all 5 Pages 14 August 2026
+Remove colour decorations and styling - 14 August 2026
 
 ## References
 
