@@ -44,6 +44,7 @@ Added a services page - 10 August 2026
 Added pictures to Travel package - 13 August 2026
 Finish coding all 5 Pages 14 August 2026
 Remove colour decorations and styling - 14 August 2026
+Add research - 14 August 2026
 
 ## References
 
@@ -55,3 +56,9 @@ https://advertisingsolutions.co.za/website-design-cost-south-africa/ [Accessed
 [online] Allanux Web Blog. Available at: 
 https://www.allanuxweb.com/blog/website-maintenance-costs [Accessed 5 
 Aug. 2026].
+•Reich, T. (2020). brown rocky mountain beside sea during daytime. [online] Unsplash.com. Unsplash. Available at: https://unsplash.com/photos/brown-rocky-mountain-beside-sea-during-daytime--7ZwuyDx2rI [Accessed 14 Aug. 2026].
+•Tomaseti, D. (2020). zebra standing on green grass during daytime. [online] Unsplash.com. Unsplash. Available at: https://unsplash.com/photos/zebra-standing-on-green-grass-during-daytime-Vw2HZQ1FGjU [Accessed 14 Aug. 2026].
+•Unsplash (2019). Photo by Todd Cravens on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/blue-whale-on-sea-lwACYK8ScmA [Accessed 14 Aug. 2026].
+•Unsplash (2018). Photo by Fredrik Öhlander on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/camels-on-beach-sands-fCW1hWq2nq0 [Accessed 14 Aug. 2026].
+
+
