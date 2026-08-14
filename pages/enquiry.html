@@ -24,6 +24,7 @@
 </section>
 <h1 style="text-align: center;">Inquiry Form</h1>
  <!--Create a form-->
+
 <form action="#" method="post" style="text-align: center;">
     <Label for="name" name="name">Your Name:</Label><br/>
     <input type="text" id="name" placeholder="Tell us who you are" required>
@@ -35,6 +36,7 @@
 
     <Label for="travel" name="travel">Travel type:</Label><br/>
 
+<!---Type of travel-->
     <select id="travel" name="travel" required>
         <option value="">Select travel type</option>
         <option value="domestic trip">Domestic</option>
@@ -44,7 +46,7 @@
 
     </select>
     <br/><br/>
-
+<!--Ask for travel details from the user-->
     <label for="destination">Destination:</label><br/>
     <input type="text" id="destination" name="destination" placeholder="Where would you like to go?" required>
     <br/><br/>
@@ -56,10 +58,10 @@
     <label for="travel_dates" name="travel_dates">Travel Dates:</label><br/>
     <input type="text" id="travel_dates" name="travel_dates" placeholder="Please provide your preferred travel dates" required>
     <br/><br/>
-
     <Label for="budget" name="budget"> Estimated Budget:</Label><br/>
     <input type="number" name="budget" min="0" placeholder="What is your estimated budget?" required>
 
+<!--Added currency for customers-->
     currency: <select name="currency" required>
         <option value="">Select currency</option>
         <option value="USD">USD</option>
@@ -86,10 +88,10 @@
 <Label for="message" name="message">Message:</Label><br/>
 <textarea name="message" rows="10" cols="40" placeholder="Please tell us any additional information or special requests you have" required></textarea>
 
-
+<!--Submission button-->
 </textarea>
 <br/><br/>
-<button type="submit" style="background-color: maroon; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+<button type="submit">Submit</button>
 </optgroup>
 
 
