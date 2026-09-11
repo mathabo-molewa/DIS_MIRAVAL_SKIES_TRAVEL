@@ -23,6 +23,7 @@ Ice task two(Github URL sent) - 8 August 2026
 Research - 12 August 2026
 Finish coding all 5 pages - 14 August 2026
 Part one - 14 August 2026
+Begin Part 2 - 11 September 2026
 
 ## Sitemap
 
@@ -45,6 +46,8 @@ Added pictures to Travel package - 13 August 2026
 Finish coding all 5 Pages 14 August 2026
 Remove colour decorations and styling - 14 August 2026
 Add research - 14 August 2026
+Begin Part 2 - 11 September 2026
+Add footer section - 11 September
 
 ## References
 
