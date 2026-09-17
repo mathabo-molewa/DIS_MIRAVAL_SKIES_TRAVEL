@@ -25,6 +25,7 @@ Finish coding all 5 pages - 14 August 2026
 Part one - 14 August 2026
 Begin Part 2 - 11 September 2026
 Fix proposal - 13 Septmber 2026
+Add a site map on the proposal - 14 September 2026
 
 ## Sitemap
 
