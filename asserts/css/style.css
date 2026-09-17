@@ -7,10 +7,7 @@ body {
     margin: 0;
     padding: 0;
 }
-hr {
-    border: none;
-    border-top: 5px solid white;
-}
+
 
 /* =========================
    MAIN HEADINGS
@@ -94,28 +91,30 @@ ul{
 }
 
 
-nav{
-    color: maroon;
-    font-family: Arial, sans-serif; 
-
-}
-/* Navigation bar */
-nav {
+header {
     background-color: maroon;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
 }
 
-nav img {
-    width: 160px;
-    display: block;
-    margin: 0 auto 20px auto;
+header img {
+    width: 120px;
+    height: auto;
+    margin-right: 40px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+    font-family: Arial, sans-serif;
 }
 
 nav a:hover {
