@@ -1,0 +1,176 @@
+
+
+body {
+    background-color: lightpink;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+hr {
+    border: none;
+    border-top: 5px solid white;
+}
+
+/* =========================
+   MAIN HEADINGS
+   ========================= */
+
+h1 {
+    color: maroon;
+   font-family: Arial, sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+h2 {
+    color: maroon;
+    font-family: great vibes, cursive;
+    font-size: 35px;
+    text-align: center;
+    font-weight: normal;
+}
+
+
+
+h3 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+p {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+
+a {
+    color: maroon;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightpink;
+}
+
+
+
+button {
+    background-color: maroon;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: lightpink;
+    color: maroon;
+}
+
+li{
+    font-family: Arial, sans-serif;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+
+}
+ul{
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav{
+    color: maroon;
+    font-family: Arial, sans-serif; 
+
+}
+/* Navigation bar */
+nav {
+    background-color: maroon;
+    text-align: center;
+    padding: 20px;
+}
+
+nav img {
+    width: 160px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: lightpink;
+}
+
+/* Footer */
+footer {
+    background-color: maroon;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+}
+/* Meet Our Team */
+/* About Us - Team and Sections */
+
+.team {
+    text-align: center;
+}
+
+.team h2 {
+    color: maroon;
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.team ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+}
+
+.team li {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.team img {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    border: 3px solid maroon;
+    border-radius: 20px;
+}
