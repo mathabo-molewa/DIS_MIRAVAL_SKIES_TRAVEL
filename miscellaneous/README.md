@@ -28,12 +28,11 @@ Fix proposal - 13 Septmber 2026
 Add a site map on the proposal - 14 September 2026
 
 ## Sitemap
-
--Home
--About us
--Contact us
--Enquiry
--Services
+             Miraval Skies travel
+                      |
+________________________________________
+|             |            |           |           
+About us   Contact us   Enquiry   Services
 
 ## Changelog
 Created the structure on Visual studio code - 01 August 2026
