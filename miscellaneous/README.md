@@ -28,6 +28,14 @@ Fix proposal - 13 Septmber 2026
 Add a site map on the proposal - 14 September 2026
 Apply desktop CSS styling - 17 September
 
+
+## Sitemap
+             Miraval Skies travel
+                      |
+________________________________________
+|             |            |           |           
+About us   Contact us   Enquiry   Services
+
 ##  Part 2 Details
 
 Part two takes a focus on the visual aspect and responsive styling for the website.
@@ -42,14 +50,6 @@ Using an external CSS stylesheet, it was linked to all the webpages.
 -Reponsive Images and layout adjustments
 
 
-
-
-## Sitemap
-             Miraval Skies travel
-                      |
-________________________________________
-|             |            |           |           
-About us   Contact us   Enquiry   Services
 
 ## Changelog
 Created the structure on Visual studio code - 01 August 2026
