@@ -82,6 +82,9 @@ Added a visual sitemap to the readme.md - 14 Septemebr
 Added base styling: background colours, fonts, margines and padding - 17 September
 Added typography for headings, paragraphs and lists - 17 September 2026
 Added visual styling, hover, focus effects, responsive css styling - 17 September 2026
+Tested the website -18 September 2026
+Added the screenshots to README -18 September 2026
+Finish part 2 -18 September 2026
 ## References
 
 •ASWD (2017). How Much Does a Website Design Cost in South Africa? | 
