@@ -58,8 +58,13 @@ Using an external CSS stylesheet, it was linked to all the webpages.
 The website was testedt to check how it looks on different screen sizes, checked navigation, quicklines, fitting and functionality.
 
 -Desktop
+<img width="1113" height="920" alt="Screenshot 2026-09-18 104341" src="https://github.com/user-attachments/assets/0b18130a-5d42-4b7a-a09d-890063d00f7d" />
+
 -Tablet
+<img width="986" height="923" alt="Screenshot 2026-09-18 104447" src="https://github.com/user-attachments/assets/9ee556d9-c751-4488-b100-7e1555bef7c5" />
+
 -Phone
+<img width="949" height="896" alt="Screenshot 2026-09-18 104527" src="https://github.com/user-attachments/assets/5abf665b-0bf2-40ae-95a5-90b9e91a15a9" />
 
 
 ## Changelog
