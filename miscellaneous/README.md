@@ -27,6 +27,22 @@ Begin Part 2 - 11 September 2026
 Fix proposal - 13 Septmber 2026
 Add a site map on the proposal - 14 September 2026
 
+##  Part 2 Details
+
+Part two takes a focus on the visual aspect and responsive styling for the website.
+Using an external CSS stylesheet, it was linked to all the webpages.
+-Base styling 
+-Consistent colour theme
+-Typography and font styling
+-Header and nagivation styling
+-Submit button styling and hover effects
+-Borders, rounded corners and box shadows
+-Responsive design for all screens
+-Reponsive Images and layout adjustments
+
+
+
+
 ## Sitemap
              Miraval Skies travel
                       |
