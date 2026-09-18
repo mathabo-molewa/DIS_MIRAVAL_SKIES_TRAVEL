@@ -46,9 +46,20 @@ Using an external CSS stylesheet, it was linked to all the webpages.
 -Header and nagivation styling
 -Submit button styling and hover effects
 -Borders, rounded corners and box shadows
--Responsive design for different screens
--Reponsive layout adjustments
+-Flexbox
+-CSS Grid
+-Responsive design for desktop, tablet and mobile screens
+-Reponsive layout and image adjustments
+-Form styling for enquiry page
+-Responsive navigation
+-Content Adjustments using media queries
 
+## Testing
+The website was testedt to check how it looks on different screen sizes, checked navigation, quicklines, fitting and functionality.
+
+-Desktop
+-Tablet
+-Phone
 
 
 ## Changelog
