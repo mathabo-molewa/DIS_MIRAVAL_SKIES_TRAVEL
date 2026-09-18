@@ -26,6 +26,7 @@ Part one - 14 August 2026
 Begin Part 2 - 11 September 2026
 Fix proposal - 13 Septmber 2026
 Add a site map on the proposal - 14 September 2026
+Apply desktop CSS styling - 17 September
 
 ##  Part 2 Details
 
