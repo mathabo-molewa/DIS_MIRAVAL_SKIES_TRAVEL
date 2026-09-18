@@ -49,8 +49,11 @@ Remove colour decorations and styling - 14 August 2026
 Add research - 14 August 2026
 Begin Part 2 - 11 September 2026
 Add footer section - 11 September
-Add 
-
+Revisit Part and make corrections - 13 September 2026
+Added a visual sitemap to the readme.md - 14 Septemebr
+Added base styling: background colours, fonts, margines and padding - 17 September
+Added typography for headings, paragraphs and lists - 17 September 2026
+Added visual styling, hover, focus effects, responsive css styling - 17 September 2026
 ## References
 
 •ASWD (2017). How Much Does a Website Design Cost in South Africa? | 
