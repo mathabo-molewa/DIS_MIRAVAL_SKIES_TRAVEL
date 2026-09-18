@@ -46,8 +46,8 @@ Using an external CSS stylesheet, it was linked to all the webpages.
 -Header and nagivation styling
 -Submit button styling and hover effects
 -Borders, rounded corners and box shadows
--Responsive design for all screens
--Reponsive Images and layout adjustments
+-Responsive design for different screens
+-Reponsive layout adjustments
 
 
 
