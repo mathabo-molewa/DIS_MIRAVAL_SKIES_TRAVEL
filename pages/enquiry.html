@@ -10,108 +10,245 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
-
 </head>
 <body>
+
 <!--Header goes here-->
-    <header>
-        <!--Logo goes here-->
-        <img src ="../asserts/images/7b50fef0-ea6f-411f-ad5a-39a434a23fa6.png" alt="Miraval Skies Travel Logo" width="120">
-        <!--Navigation links-->
-        <nav>
-            <a href="../index.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="contact.html">CONTACT US</a>
-            <a href="enquiry.html">ENQUIRY</a>
-            <a href="services.html">SERVICES</a>
-            
-        </nav>
-    </header>
+<header>
 
+    <!--Logo goes here-->
+    <img src="../asserts/images/7b50fef0-ea6f-411f-ad5a-39a434a23fa6.png"
+         alt="Miraval Skies Travel Logo" width="120">
 
-<h1> Reach out to us!</h1>
-<h4>Inquiry Form</h4>
- <!--Create a form-->
+    <!--Navigation links-->
+    <nav>
+        <a href="../index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="enquiry.html">ENQUIRY</a>
+        <a href="services.html">SERVICES</a>
+    </nav>
+</header>
 
-<form action="#" method="post">
-    <Label for="name" name="name">Your Name:</Label><br/>
-    <input type="text" id="name" placeholder="Tell us who you are" required>
-    <br/><br/>
+<!--Main section-->
+<main>
+    <h1>Reach out to us!</h1>
+    <h4>Enquiry Form</h4>
 
-    <Label for="email" name="email">Email Address:</Label><br/>
-    <input type="email" id="email" placeholder="Enter your email address" required>
-    <br/><br/>    
+    <p>
+        Tell us about your travel plans. Our team will review your
+        requirements and assist you with pricing and availability.
+    </p>
 
-    <Label for="travel" name="travel">Travel type:</Label><br/>
+    <!--Create a form-->
+    <form id="enquiryForm">
 
-<!---Type of travel-->
-    <select id="travel" name="travel" required>
-        <option value="">Select travel type</option>
-        <option value="domestic trip">Domestic</option>
-        <option value="international trip">International</option>
-        <option value="cruise">Cruise</option>
-        <option value ="corporate Travel">Corporate</option>
+        <!--Collect the customer's contact information-->
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name"
+               placeholder="Tell us who you are"
+               required minlength="2">
 
-    </select>
-   
-<!--Ask for travel details from the user-->
-    <label for="destination">Destination:</label><br/>
-    <input type="text" id="destination" name="destination" placeholder="Where would you like to go?" required>
-    
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email address" required>
 
-    <label for="Number_Travellers" name="Number_Travellers">Number of Travellers:</label><br/>
-    <input type="number" id="Number_Travellers" name="Number_Travellers" placeholder="How many people are travelling?" required>
-    
-
-    <label for="travel_dates" name="travel_dates">Travel Dates:</label><br/>
-    <input type="text" id="travel_dates" name="travel_dates" placeholder="Please provide your preferred travel dates" required>
-    
-    <label for="budget" name="budget">Budget:</label><br/>
-    <input type="text" id="budget" name="budget" placeholder="Please provide your budget for the trip" required>
-<!--Added currency for customers-->
-    currency: <select name="currency" required>
-        <option value="">Select currency</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-        <option value="ZAR">ZAR</option>
-        <option value="JPY">JPY</option>
-        <option value="AUD">AUD</option>
-        <optgroup label="Other Currencies">
-            <option value="CAD">CAD</option>
-            <option value="CHF">CHF</option>
-            <option value="CNY">CNY</option>
-            <option value="INR">INR</option>
-            <option value="BRL">BRL</option>
-            <option value="MXN">MXN</option>
-            <option value="NZD">NZD</option>
-            <option value="SGD">SGD</option>
-            <option value="SEK">SEK</option>
-            <option value="NOK">NOK</option>
+        <!--Type of travel-->
+        <label for="travel">Travel type:</label>
+        <select id="travel" name="travel" required>
+            <option value="">Select travel type</option>
+            <option value="Domestic">Domestic</option>
+            <option value="International">International</option>
+            <option value="Cruise">Cruise</option>
+            <option value="Corporate">Corporate Travel</option>
         </select>
-<br/><br/>
 
+        <!--Ask for travel details from the user-->
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination"
+               placeholder="Where would you like to go?" required>
 
-<Label for="message" name="message">Message:</Label><br/>
-<textarea name="message" rows="10" cols="40" placeholder="Please tell us any additional information or special requests you have" required></textarea>
-<br/><br/>
-<!--Submission button-->
+        <label for="Number_Travellers">Number of Travellers:</label>
+        <input type="number" id="Number_Travellers"
+               name="Number_Travellers"
+               min="1" max="100" step="1"
+               placeholder="How many people are travelling?" required>
 
-<button type="submit">Submit</button>
-<!--close the form-->
-</form>
+        <!--Collect the preferred travel dates-->
+        <label for="travel_dates">Departure Date:</label>
+        <input type="date" id="travel_dates" name="travel_dates" required>
+
+        <label for="return_date">Return Date:</label>
+        <input type="date" id="return_date" name="return_date" required>
+
+        <!--Collect the customer's travel budget-->
+        <label for="budget">Budget:</label>
+        <input type="number" id="budget" name="budget"
+               min="0.01" step="0.01"
+               placeholder="Please provide your budget for the trip"
+               required>
+
+        <!--Added currency for customers-->
+        <label for="currency">Currency:</label>
+        <select id="currency" name="currency" required>
+            <option value="">Select currency</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="ZAR">ZAR</option>
+            <option value="JPY">JPY</option>
+            <option value="AUD">AUD</option>
+
+            <!--Other currencies-->
+            <optgroup label="Other Currencies">
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="INR">INR</option>
+                <option value="BRL">BRL</option>
+                <option value="MXN">MXN</option>
+                <option value="NZD">NZD</option>
+                <option value="SGD">SGD</option>
+                <option value="SEK">SEK</option>
+                <option value="NOK">NOK</option>
+            </optgroup>
+        </select>
+
+        <!--Collect additional travel requirements-->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5"
+                  placeholder="Please tell us any additional information or special requests you have"></textarea>
+
+        <!--Submission button-->
+        <button type="submit">Submit Enquiry</button>
+
+    <!--Close the form-->
+    </form>
+
+    <!--Display the response after the enquiry has been validated-->
+    <section id="enquiryResponse" class="form-response"
+             aria-live="polite" hidden></section>
+</main>
 
 <!--Footer section-->
 <footer>
     <p>© 2024 Miraval Skies Travel. All rights reserved.</p>
-    <p> Quick Links:
-         <a href="../index.html">Home</a> | 
-         <a href="./about.html">About Us</a> | 
-         <a href="./contact.html">Contact Us</a> | 
-         <a href="./enquiry.html">Enquiry</a> | 
-         <a href="./services.html">Services</a></p>
 
-    <p> Social Media Links: <a href="https://www.facebook.com/">Facebook</a> | <a href="https://www.instagram.com/">Instagram</a></p>
+    <p>Quick Links:
+        <a href="../index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact Us</a> |
+        <a href="enquiry.html">Enquiry</a> |
+        <a href="services.html">Services</a>
+    </p>
+
+    <p>Social Media Links:
+        <a href="https://www.facebook.com/">Facebook</a> |
+        <a href="https://www.instagram.com/">Instagram</a>
+    </p>
 </footer>
+
+<!--JavaScript for validating the enquiry form and displaying a response-->
+<script>
+    const enquiryForm = document.getElementById("enquiryForm");
+    const departureDate = document.getElementById("travel_dates");
+    const returnDate = document.getElementById("return_date");
+    const enquiryResponse = document.getElementById("enquiryResponse");
+
+   <!-- Set the minimum date for departure and return to today's date. -->
+    const today = new Date();
+    const todayString =
+        today.getFullYear() + "-" +
+        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+        String(today.getDate()).padStart(2, "0");
+
+    departureDate.min = todayString;
+    returnDate.min = todayString;
+
+    
+    departureDate.addEventListener("change", function () {
+        returnDate.min = departureDate.value || todayString;
+
+        // Clear the return date if it is before the departure date.
+        if (returnDate.value && returnDate.value < departureDate.value) {
+            returnDate.value = "";
+        }
+    });
+
+    // Validate the form and process the customer's travel details.
+    enquiryForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        
+        if (returnDate.value < departureDate.value) {
+            returnDate.setCustomValidity(
+                "The return date must be on or after the departure date."
+            );
+            returnDate.reportValidity();
+            return;
+        }
+
+        returnDate.setCustomValidity("");
+
+        // Stop the form if any required information is invalid.
+        if (!enquiryForm.reportValidity()) {
+            return;
+        }
+
+        // Retrieve the validated information entered by the customer.
+        const formData = new FormData(enquiryForm);
+
+        const name = formData.get("name").trim();
+        const travel = formData.get("travel");
+        const destination = formData.get("destination").trim();
+        const travellers = formData.get("Number_Travellers");
+        const departure = formData.get("travel_dates");
+        const returnTrip = formData.get("return_date");
+        const budget = Number(formData.get("budget"));
+        const currency = formData.get("currency");
+
+        // Create the response heading.
+        enquiryResponse.replaceChildren();
+
+        const heading = document.createElement("h2");
+        heading.textContent = "Thank You, " + name + "!";
+
+        // Display a confirmation based on the selected travel type.
+        const confirmation = document.createElement("p");
+        confirmation.textContent =
+            "Your " + travel.toLowerCase() +
+            " travel enquiry for " + destination +
+            " has been captured for review.";
+
+        // Display the customer's travel details and budget.
+        const details = document.createElement("p");
+        details.textContent =
+            "Number of travellers: " + travellers +
+            ". Departure: " + departure +
+            ". Return: " + returnTrip +
+            ". Budget: " + currency + " " +
+            budget.toLocaleString("en-ZA", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+
+        // Explain the next step regarding price and availability.
+        const nextStep = document.createElement("p");
+        nextStep.textContent =
+            "Our team must confirm the actual travel costs and " +
+            "availability before providing a quotation. " +
+            "No booking has been made, and this demonstration form " +
+            "does not send your enquiry to the business.";
+
+        // Display the completed response to the customer.
+        enquiryResponse.append(heading, confirmation, details, nextStep);
+        enquiryResponse.hidden = false;
+        enquiryResponse.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+</script>
+
 </body>
 </html>

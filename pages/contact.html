@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,70 +11,217 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
-
 </head>
 <body>
+
 <!--Header goes here-->
-    <header>
-        <!--Logo goes here-->
-        <img src ="../asserts/images/7b50fef0-ea6f-411f-ad5a-39a434a23fa6.png" alt="Miraval Skies Travel Logo" width="120">
-        <!--Navigation links-->
-        <nav>
-            <a href="../index.html">HOME</a>
-            <a href="./about.html">ABOUT US</a>
-            <a href="./contact.html">CONTACT US</a>
-            <a href="./enquiry.html">ENQUIRY</a>
-            <a href="./services.html">SERVICES</a>
-            
-        </nav>
-    </header>
+<header>
+
+    <!--Logo goes here-->
+    <img src="../asserts/images/7b50fef0-ea6f-411f-ad5a-39a434a23fa6.png"
+         alt="Miraval Skies Travel Logo" width="120">
+
+    <!--Navigation links-->
+    <nav>
+        <a href="../index.html">HOME</a>
+        <a href="./about.html">ABOUT US</a>
+        <a href="./contact.html">CONTACT US</a>
+        <a href="./enquiry.html">ENQUIRY</a>
+        <a href="./services.html">SERVICES</a>
+    </nav>
+</header>
+
 <!--Main section-->
-    <main>
-        <section>
-            <h1>CONTACT US</h1>
-            <p >
-                Have something you'd like to say? We make it easy to get in touch with us and let us help make your travel dreams a reality. 
-                Get in touch with our team of travel experts today and we'll get back to you within 24 business hours.
+<main>
+    <section>
+        <h1>CONTACT US</h1>
 
-            </p><br/>
-            <hr/>
-        </section>
-         
-        <!--Contact details-->
-        <section>
-            <h2>Get In Touch</h2>
-           <ul>
-                 <li>Email: info@miravalskiestravel.com</li>
-                 <li>Phone: +27 762778754</li>
-                 <li>Hours: Monday to Friday, 9:00 AM - 5:00 PM SAST</li>
+        <p>
+            Have something you'd like to say? We make it easy to get
+            in touch with us and let us help make your travel dreams
+            a reality. Get in touch with our team today.
+        </p>
+        <br>
+        <hr>
+    </section>
 
-           </ul>
-           <br/><hr/>
-                
-        </section>
+    <!--Contact details-->
+    <section>
+        <h2>Get In Touch</h2>
 
-        <!--Location details-->
-        <section> 
-            <h2>Location Details</h2>
-           <ul>
-                     <li>Adress: 66 Outeniqua Street, White River, South Africa</li>    
-                     <li> Map: view on Google Maps </li>
-           </ul>
-           <!--Google maps-->
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.2537345897954!2d30.996244076053486!3d-25.329265328914804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee831780346bddf%3A0x533ce3833fa1d9fc!2s66%20Outeniqua%20St%2C%20White%20River%2C%201240!5e0!3m2!1sen!2sza!4v1786087729534!5m2!1sen!2sza" 
-             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><br/><br/>
-            <br/><hr/>
+        <ul>
+            <li>Email: info@miravalskiestravel.com</li>
+            <li>Phone: +27 762778754</li>
+            <li>Hours: Monday to Friday, 9:00 AM - 5:00 PM SAST</li>
+        </ul>
 
-        </section>
+        <br>
+        <hr>
+    </section>
 
-    </main>               
-    
+    <!--Contact form for general messages sent to the organisation-->
+    <section>
+        <h2>Send Us a Message</h2>
+
+        <!--Create a form to collect the customer's contact information-->
+        <form id="contactForm">
+
+            <!--Collect the customer's name and email address-->
+            <label for="contactName">Full Name:</label>
+            <input type="text" id="contactName" name="contactName"
+                   placeholder="Enter your full name"
+                   required minlength="2">
+
+            <label for="contactEmail">Email Address:</label>
+            <input type="email" id="contactEmail" name="contactEmail"
+                   placeholder="Enter your email address" required>
+
+            <!--Collect an optional phone number-->
+            <label for="contactPhone">Phone Number (Optional):</label>
+            <input type="tel" id="contactPhone" name="contactPhone"
+                   placeholder="e.g. +27 76 123 4567"
+                   pattern="[0-9+() -]{7,20}">
+
+            <!--Allow the customer to select the type of message-->
+            <label for="messageType">Type of Message:</label>
+            <select id="messageType" name="messageType" required>
+                <option value="">Select message type</option>
+                <option value="General enquiry">General enquiry</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Compliment">Compliment</option>
+                <option value="Partnership opportunity">Partnership opportunity</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!--Collect the full message from the customer-->
+            <label for="contactMessage">Your Message:</label>
+            <textarea id="contactMessage" name="contactMessage"
+                      rows="7"
+                      placeholder="Please enter your full message"
+                      required minlength="10"></textarea>
+
+            <!--Submission button-->
+            <button type="submit">Prepare Email</button>
+
+        <!--Close the form-->
+        </form>
+
+        <!--Display confirmation and the email link after validation-->
+        <section id="contactResponse" class="form-response"
+                 aria-live="polite" hidden></section>
+    </section>
+
+    <!--Location details-->
+    <section>
+        <h2>Location Details</h2>
+
+        <ul>
+            <li>Address: 66 Outeniqua Street, White River, South Africa</li>
+            <li>Map: View our location on Google Maps</li>
+        </ul>
+
+        <!--Google maps-->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.2537345897954!2d30.996244076053486!3d-25.329265328914804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee831780346bddf%3A0x533ce3833fa1d9fc!2s66%20Outeniqua%20St%2C%20White%20River%2C%201240!5e0!3m2!1sen!2sza!4v1786087729534!5m2!1sen!2sza"
+            width="100%" height="450"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Map showing Miraval Skies Travel's location">
+        </iframe>
+
+        <br>
+        <br>
+        <hr>
+    </section>
+</main>
 
 <!--Footer section-->
 <footer>
     <p>© 2024 Miraval Skies Travel. All rights reserved.</p>
-    <p> Quick Links: <a href="../index.html">Home</a> | <a href="./about.html">About Us</a> | <a href="./contact.html">Contact Us</a> | <a href="./enquiry.html">Enquiry</a> | <a href="./services.html">Services</a></p>
-    <p> Social Media Links: <a href="https://www.facebook.com/">Facebook</a> | <a href="https://www.instagram.com/">Instagram</a></p>
+
+    <p>Quick Links:
+        <a href="../index.html">Home</a> |
+        <a href="./about.html">About Us</a> |
+        <a href="./contact.html">Contact Us</a> |
+        <a href="./enquiry.html">Enquiry</a> |
+        <a href="./services.html">Services</a>
+    </p>
+
+    <p>Social Media Links:
+        <a href="https://www.facebook.com/">Facebook</a> |
+        <a href="https://www.instagram.com/">Instagram</a>
+    </p>
 </footer>
+
+<!--JavaScript for validating the contact form and preparing an email-->
+<script>
+    const contactForm = document.getElementById("contactForm");
+    const contactResponse = document.getElementById("contactResponse");
+
+  
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!contactForm.reportValidity()) {
+            return;
+        }
+
+        const formData = new FormData(contactForm);
+
+        const name = formData.get("contactName").trim();
+        const email = formData.get("contactEmail").trim();
+        const phone = formData.get("contactPhone").trim();
+        const type = formData.get("messageType");
+        const message = formData.get("contactMessage").trim();
+
+      
+        const subject = type + " - Website Contact Form";
+
+        const emailBody =
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Phone: " + (phone || "Not provided") + "\n" +
+            "Message Type: " + type + "\n\n" +
+            "Message:\n" + message;
+
+       
+        const mailtoLink =
+            "mailto:info@miravalskiestravel.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(emailBody);
+
+        
+        contactResponse.replaceChildren();
+
+        const confirmation = document.createElement("p");
+        confirmation.textContent =
+            "Your message has been validated and prepared. " +
+            "Click the link below to open your email application.";
+
+        
+        const emailLink = document.createElement("a");
+        emailLink.href = mailtoLink;
+        emailLink.textContent = "Open Email to Send Message";
+
+        const note = document.createElement("p");
+        note.textContent =
+            "Your message will only be sent when you press Send " +
+            "in your email application.";
+
+        // Display the response and email link.
+        contactResponse.append(confirmation, emailLink, note);
+        contactResponse.hidden = false;
+
+        contactResponse.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+</script>
+
 </body>
 </html>
+
