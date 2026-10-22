@@ -3,71 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miraval Skies Travel | HOME</title>
+
+    <!-- SEO: Page title and description -->
+    <title>Luxury Travel Agency in South Africa | Miraval Skies Travel</title>
+    <meta name="description" content="Discover luxury domestic and international holidays, cruises and personalised travel experiences with Miraval Skies Travel.">
+    <meta name="robots" content="index, follow">
 
     <!-- Link external CSS -->
     <link rel="stylesheet" href="./asserts/css/style.css">
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
-
-
 </head>
 
 <body>
-    <!--Header goes here-->
+    <!-- Header section -->
     <header>
-        <!--Logo goes here-->
-        <img src ="./asserts/images/7b50fef0-ea6f-411f-ad5a-39a434a23fa6.png" alt="Miraval Skies Travel Logo" width="120">
+        <!-- Website logo -->
+        <img
+            src="./asserts/images/7b50fef0-ea6f-411f-ad5a-39a434a23fa6.png"
+            alt="Miraval Skies Travel company logo"
+            width="120"
+        >
 
-        <!--Navigation links-->
-        <nav>
-            <a href="./index.html">HOME</a>
+        <!-- Main navigation links -->
+        <nav aria-label="Main navigation">
+            <a href="./index.html" aria-current="page">HOME</a>
             <a href="./pages/about.html">ABOUT US</a>
             <a href="./pages/contact.html">CONTACT US</a>
             <a href="./pages/enquiry.html">ENQUIRY</a>
             <a href="./pages/services.html">SERVICES</a>
-            
         </nav>
     </header>
 
-    <!--Main section-->
+    <!-- Main page content -->
     <main>
-        <!--First section-->
-        <section>
-              <!--WELCOME MESSAGE-->
-              
-              <h1>WELCOME TO MIRAVAL SKIES TRAVEL</h1>
-              
-              <!--DECRIPTION PARAGRAPH-->
-              <P>  MIRAVAL SKIES TRAVEL IS A SOUTH AFRICAN-BASED 
-                LUXURY TRAVEL AGENCY CONNECTING TOURISTS WITH THEIR DREAM DESTINATION. FROM SAFARIS, CRUISES TO INBOUND
-                 AND OUTBOUND EXPERIENCES. WE HANDLE IT ALL; FLIGHTS, CAR RENTALS, CHAUFFUERS, HOTELS STAYS AND ITENANIRY PLANNING,
-                  WE MAKE YOUR EXPERIENCES A DREAM COME TRUE.</P> 
-                
-              <!--INSERT AN IMAGE-->   
-              <img src="./asserts/images/luxury-travel-agency-benefits (2).jpg" width="100%" height="100%" alt="Main image" >
-              </section>
+        <!-- Welcome and introduction section -->
+        <section aria-labelledby="welcome-heading">
+            <!-- Main page heading -->
+            <h1 id="welcome-heading">WELCOME TO MIRAVAL SKIES TRAVEL</h1>
 
-       
+            <!-- Introduction to the travel agency -->
+            <p>
+                Miraval Skies Travel is a South African luxury travel agency
+                connecting travellers with memorable destinations and
+                personalised travel experiences. From safaris and cruises to
+                domestic and international holidays, we help travellers plan
+                their journeys. Our services can include flights, car rentals,
+                chauffeur services, hotel stays and itinerary planning.
+            </p>
+
+            <!-- Main travel image -->
+            <img
+                src="./asserts/images/luxury-travel-agency-benefits (2).jpg"
+                alt="Luxury travel inspiration for visitors planning their next holiday"
+                class="home-hero-image"
+                fetchpriority="high"
+            >
+
+            <!-- Calls to action -->
+            <div class="home-actions">
+                <a class="home-button" href="./pages/services.html">
+                    Explore Our Services
+                </a>
+
+                <a class="home-button" href="./pages/enquiry.html">
+                    Plan Your Trip
+                </a>
+            </div>
+
+            <!-- JavaScript interactive feature -->
+            <div class="home-discovery">
+                <button
+                    type="button"
+                    id="discoveryButton"
+                    aria-expanded="false"
+                    aria-controls="discoveryMessage"
+                >
+                    Discover Our Approach
+                </button>
+
+                <p id="discoveryMessage" hidden>
+                    Every journey starts with your travel goals.
+                    Explore our services or submit an enquiry to discuss
+                    your travel plans with Miraval Skies Travel.
+                </p>
+            </div>
+        </section>
     </main>
 
-<!--Footer section-->
-<footer>
+    <!-- Footer section -->
+    <footer>
+        <!-- Copyright year is updated by JavaScript -->
+        <p>
+            &copy; 
+        <span id="copyrightYear">2026</span>
+            Miraval Skies Travel. All rights reserved.
+        </p>
 
-    <p>© 2024 Miraval Skies Travel. All rights reserved.</p>
-  <p>
-    Quick Links:
-    <a href="./index.html">Home</a> |
-    <a href="./pages/about.html">About Us</a> |
-    <a href="./pages/contact.html">Contact Us</a> |
-    <a href="./pages/enquiry.html">Enquiry</a> |
-    <a href="./pages/services.html">Services</a>
-</p>
-    <p> Social Media Links: <a href="https://www.facebook.com/">Facebook</a> | <a href="https://www.instagram.com/">Instagram</a></p>
-</footer>
+        <!-- Quick links to website pages -->
+        <p>
+            Quick Links:
+            <a href="./index.html">Home</a> |
+            <a href="./pages/about.html">About Us</a> |
+            <a href="./pages/contact.html">Contact Us</a> |
+            <a href="./pages/enquiry.html">Enquiry</a> |
+            <a href="./pages/services.html">Services</a>
+        </p>
+
+        <!-- Social media links: replace with official business profiles when available -->
+        <p>
+            Social Media:
+            <a href="https://www.facebook.com/"
+               target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.instagram.com/"
+               target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+    </footer>
+
+    <!-- Link the homepage JavaScript file -->
+    <script src="./asserts/js/home.js" defer></script>
 </body>
 </html>
+
 
 
 

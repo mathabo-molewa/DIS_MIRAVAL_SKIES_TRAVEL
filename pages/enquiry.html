@@ -179,16 +179,19 @@
     enquiryForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        
-        if (returnDate.value < departureDate.value) {
-            returnDate.setCustomValidity(
-                "The return date must be on or after the departure date."
-            );
-            returnDate.reportValidity();
-            return;
-        }
+        // Clear any previous custom validation message.
+returnDate.setCustomValidity("");
 
-        returnDate.setCustomValidity("");
+// Check that the return date is not before departure.
+if (returnDate.value < departureDate.value) {
+    returnDate.setCustomValidity(
+        "The return date must be on or after the departure date."
+    );
+}
+
+if (!enquiryForm.reportValidity()) {
+    return;
+}
 
         // Stop the form if any required information is invalid.
         if (!enquiryForm.reportValidity()) {
