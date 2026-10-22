@@ -813,3 +813,120 @@ a:focus {
         padding: 1rem;
     }
 }
+
+
+/* SERVICES PAGE SEARCH AND FILTER */
+
+.service-controls {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 2px solid maroon;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.service-controls label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+.service-controls input,
+.service-controls select {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    border: 1px solid maroon;
+    border-radius: 6px;
+    font: inherit;
+}
+
+/* Centre the travel package cards */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 1.5rem auto 2.5rem;
+    box-sizing: border-box;
+}
+
+/* Keep package cards consistent and centred */
+.service-card {
+    flex: 0 1 300px;
+    width: 100%;
+    max-width: 300px;
+    min-width: 0;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-wrap: anywhere;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Keep package images inside their cards */
+.service-card .service-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Centre section headings */
+.service-category > h2 {
+    text-align: center;
+}
+
+/* Centre the layout on smaller screens */
+@media (max-width: 600px) {
+    .services-grid {
+        justify-content: center;
+    }
+
+    .service-card {
+        flex-basis: 100%;
+        max-width: 350px;
+    }
+}
+
+.service-cta {
+    text-align: center;
+    padding: 35px 20px;
+    margin: 40px auto;
+}
+
+.service-cta h2 {
+    color: maroon;
+}
+
+.service-cta p {
+    color: #000;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.service-cta-button {
+    display: inline-block;
+    background-color: maroon;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-cta-button:hover {
+    background-color: #e8a0b5;
+    color: maroon;
+    transform: translateY(-2px);
+}
+
+.service-cta-button:focus-visible {
+    outline: 3px solid maroon;
+    outline-offset: 4px;
+}

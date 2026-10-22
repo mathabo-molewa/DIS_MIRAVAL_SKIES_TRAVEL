@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Miraval Skies Travel | SERVICES</title>
+    <!-- Page title and SEO metadata -->
+    <title>Travel Packages and Services | Miraval Skies Travel</title>
+    <meta name="description" content="Explore domestic holidays, international travel packages, cruises, corporate travel and customised travel experiences with Miraval Skies Travel.">
+    <meta name="robots" content="index, follow">
 
     <!-- Link external CSS -->
     <link rel="stylesheet" href="../asserts/css/style.css">
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+
+    <!-- JavaScript for package filtering and interactive features -->
+    <script src="../asserts/js/services.js" defer></script>
 </head>
 
 <body>
@@ -19,256 +25,376 @@
     <!-- Header -->
     <header>
 
-        <!-- Logo -->
+        <!-- Website logo -->
         <img src="../asserts/images/7b50fef0-ea6f-411f-ad5a-39a434a23fa6.png"
-             alt="Miraval Skies Travel Logo"
+             alt="Miraval Skies Travel logo"
              width="120">
 
-        <!-- Navigation links -->
-        <nav>
+        <!-- Main navigation links -->
+        <nav aria-label="Main navigation">
             <a href="../index.html">HOME</a>
             <a href="./about.html">ABOUT US</a>
             <a href="./contact.html">CONTACT US</a>
             <a href="./enquiry.html">ENQUIRY</a>
-            <a href="./services.html">SERVICES</a>
+            <a href="./services.html" aria-current="page">SERVICES</a>
         </nav>
 
     </header>
 
-
-    <!-- Main section -->
+    <!-- Main services section -->
     <main>
 
         <section>
 
-            <!-- Page Introduction -->
-            <h1>OUR SERVICES</h1>
+            <!-- Page introduction -->
+            <h1>Our Travel Services and Packages</h1>
 
             <p>
-                Please note that all prices are all inclusive of flight,
-                accommodation and chartered vehicle.
+                Discover travel experiences designed around your interests,
+                destination and budget. Explore our packages below or submit
+                an enquiry for a personalised travel experience.
             </p>
 
-            <h1>Domestic Packages</h1>
+            <p>
+                Package prices shown are indicative starting prices per person.
+                Please contact us to confirm inclusions, availability and final
+                pricing before making a booking.
+            </p>
 
-            <div class="services-grid">
+            <!-- Package search and filter controls -->
+            <section class="service-controls" aria-label="Search travel packages">
 
-                <!-- Cape Town -->
-                <div class="service-card">
+                <label for="serviceSearch">Search destinations or packages:</label>
+                <input type="search" id="serviceSearch"
+                       placeholder="e.g. Cape Town, Dubai or cruises">
 
-                    <h3>Cape Town</h3>
+                <label for="serviceFilter">Filter by travel category:</label>
+                <select id="serviceFilter">
+                    <option value="all">All Services</option>
+                    <option value="domestic">Domestic Packages</option>
+                    <option value="international">International Packages</option>
+                    <option value="cruises">Cruises</option>
+                    <option value="events">Special Events</option>
+                    <option value="corporate">Corporate Travel</option>
+                    <option value="custom">Custom Travel</option>
+                </select>
 
-                    <img src="../asserts/images/tobias-reich--7ZwuyDx2rI-unsplash cape town.jpg"
-                         class="service-image"
-                         alt="Cape Town">
+                <p id="serviceCount" aria-live="polite">
+                    Showing all travel services.
+                </p>
 
-                    <p>4 Days/3 Nights from R20,000 per person</p>
+            </section>
 
-                </div>
+            <!-- Domestic travel packages -->
+            <section class="service-category" aria-labelledby="domesticHeading">
+                <h2 id="domesticHeading">Domestic Packages</h2>
 
+                <div class="services-grid">
 
-                <!-- Kruger National Park -->
-                <div class="service-card">
+                    <!-- Cape Town package -->
+                    <article class="service-card"
+                             data-category="domestic"
+                             data-search="cape town south africa domestic beach city">
 
-                    <h3>Kruger National Park</h3>
+                        <h3>Cape Town</h3>
 
-                    <img src="../asserts/images/david-tomaseti-Vw2HZQ1FGjU-unsplash Kruger.jpg"
-                         class="service-image"
-                         alt="Kruger National Park">
+                        <img src="../asserts/images/tobias-reich--7ZwuyDx2rI-unsplash cape town.jpg"
+                             class="service-image"
+                             alt="Cape Town travel destination in South Africa"
+                             loading="lazy">
 
-                    <p>5 Days/4 Nights from R30,000 per person</p>
+                        <p>4 Days / 3 Nights from R20,000 per person</p>
+                        <a href="./enquiry.html">Enquire About Cape Town</a>
 
-                </div>
+                    </article>
 
+                    <!-- Kruger National Park package -->
+                    <article class="service-card"
+                             data-category="domestic"
+                             data-search="kruger national park safari wildlife south africa">
 
-                <!-- Durban -->
-                <div class="service-card">
+                        <h3>Kruger National Park</h3>
 
-                    <h3>Durban</h3>
+                        <img src="../asserts/images/david-tomaseti-Vw2HZQ1FGjU-unsplash Kruger.jpg"
+                             class="service-image"
+                             alt="Kruger National Park safari destination"
+                             loading="lazy">
 
-                    <img src="../asserts/images/todd-cravens-lwACYK8ScmA-unsplash durban.jpg"
-                         class="service-image"
-                         alt="Durban">
+                        <p>5 Days / 4 Nights from R30,000 per person</p>
+                        <a href="./enquiry.html">Enquire About Kruger</a>
 
-                    <p>4 Days/3 Nights from R18,000 per person</p>
+                    </article>
 
-                </div>
+                    <!-- Durban package -->
+                    <article class="service-card"
+                             data-category="domestic"
+                             data-search="durban kwazulu natal beach south africa">
 
-            </div>
+                        <h3>Durban</h3>
 
-            <h1>International Packages</h1>
+                        <img src="../asserts/images/todd-cravens-lwACYK8ScmA-unsplash durban.jpg"
+                             class="service-image"
+                             alt="Durban coastal travel destination"
+                             loading="lazy">
 
-            <div class="services-grid">
+                        <p>4 Days / 3 Nights from R18,000 per person</p>
+                        <a href="./enquiry.html">Enquire About Durban</a>
 
-                <!-- Dubai -->
-                <div class="service-card">
-
-                    <h3>Dubai</h3>
-
-                    <img src="../asserts/images/fredrik-ohlander-fCW1hWq2nq0-unsplash dubai.jpg"
-                         class="service-image"
-                         alt="Dubai">
-
-                    <p>5 Days/4 Nights from R70,000 per person</p>
-
-                </div>
-
-
-                <!-- Maldives -->
-                <div class="service-card">
-
-                    <h3>Maldives</h3>
-
-                    <img src="../asserts/images/hawk-hassaan-bNNS4inRa38-unsplash maldives.jpg"
-                         class="service-image"
-                         alt="Maldives">
-
-                    <p>5 Days/4 Nights from R100,000 per person</p>
-
-                </div>
-
-
-                <!-- Paris -->
-                <div class="service-card">
-
-                    <h3>Paris</h3>
-
-                    <img src="../asserts/images/michael-fousert-Ql9PCaOhyyE-unsplash paris.jpg"
-                         class="service-image"
-                         alt="Paris">
-
-                    <p>6 Days/5 Nights from R80,000 per person</p>
+                    </article>
 
                 </div>
+            </section>
 
-            </div>
+            <!-- International travel packages -->
+            <section class="service-category" aria-labelledby="internationalHeading">
+                <h2 id="internationalHeading">International Packages</h2>
 
-            <h1>Cruises</h1>
+                <div class="services-grid">
 
-            <div class="services-grid">
+                    <!-- Dubai package -->
+                    <article class="service-card"
+                             data-category="international"
+                             data-search="dubai united arab emirates international city">
 
-                <!-- South America -->
-                <div class="service-card">
+                        <h3>Dubai</h3>
 
-                    <h3>South America</h3>
+                        <img src="../asserts/images/fredrik-ohlander-fCW1hWq2nq0-unsplash dubai.jpg"
+                             class="service-image"
+                             alt="Dubai international travel destination"
+                             loading="lazy">
 
-                    <img src="../asserts/images/matt-wilson-e92YtXK1NOU-unsplash south america.jpg"
-                         class="service-image"
-                         alt="South America">
+                        <p>5 Days / 4 Nights from R70,000 per person</p>
+                        <a href="./enquiry.html">Enquire About Dubai</a>
 
-                    <p>7 Days/6 Nights from R80,000 per person</p>
+                    </article>
 
-                </div>
+                    <!-- Maldives package -->
+                    <article class="service-card"
+                             data-category="international"
+                             data-search="maldives island tropical beach holiday">
 
+                        <h3>Maldives</h3>
 
-                <!-- World Tour -->
-                <div class="service-card">
+                        <img src="../asserts/images/hawk-hassaan-bNNS4inRa38-unsplash maldives.jpg"
+                             class="service-image"
+                             alt="Maldives island holiday destination"
+                             loading="lazy">
 
-                    <h3>World Tour</h3>
+                        <p>5 Days / 4 Nights from R100,000 per person</p>
+                        <a href="./enquiry.html">Enquire About Maldives</a>
 
-                    <img src="../asserts/images/alonso-reyes-LWFdBz4d6nE-unsplash worldwide.jpg"
-                         class="service-image"
-                         alt="World Tour">
+                    </article>
 
-                    <p>250 Days/249 Nights from R200,000 per person</p>
+                    <!-- Paris package -->
+                    <article class="service-card"
+                             data-category="international"
+                             data-search="paris france europe international city">
 
-                </div>
+                        <h3>Paris</h3>
 
+                        <img src="../asserts/images/michael-fousert-Ql9PCaOhyyE-unsplash paris.jpg"
+                             class="service-image"
+                             alt="Paris international travel destination"
+                             loading="lazy">
 
-                <!-- Europe -->
-                <div class="service-card">
+                        <p>6 Days / 5 Nights from R80,000 per person</p>
+                        <a href="./enquiry.html">Enquire About Paris</a>
 
-                    <h3>Europe</h3>
-
-                    <img src="../asserts/images/xiaoqian-shen-dxwxPdaz1nY-unsplash europe.jpg"
-                         class="service-image"
-                         alt="Europe">
-
-                    <p>15 Days/14 Nights from R90,000 per person</p>
-
-                </div>
-
-            </div>
-
-
-            <h1>Special Events</h1>
-
-            <div class="services-grid">
-
-                <!-- Rugby World Cup -->
-                <div class="service-card">
-
-                    <h3>Rugby World Cup</h3>
-
-                    <img src="../asserts/images/james-coleman-CTEvFbFpVC8-unsplash rugby.jpg"
-                         class="service-image"
-                         alt="Rugby World Cup">
-
-                    <p>South Africa 2027</p>
-
-                    <p>Contact us for a personal customized experience!</p>
+                    </article>
 
                 </div>
+            </section>
 
-            </div>
+            <!-- Cruise packages -->
+            <section class="service-category" aria-labelledby="cruiseHeading">
+                <h2 id="cruiseHeading">Cruises</h2>
 
+                <div class="services-grid">
 
-            <h1>Corporate Travel</h1>
+                    <!-- South America cruise -->
+                    <article class="service-card"
+                             data-category="cruises"
+                             data-search="south america cruise ocean travel">
 
-            <div class="services-grid">
+                        <h3>South America</h3>
 
-                <div class="service-card">
+                        <img src="../asserts/images/matt-wilson-e92YtXK1NOU-unsplash south america.jpg"
+                             class="service-image"
+                             alt="South America cruise travel destination"
+                             loading="lazy">
 
-                    <img src="../asserts/images/rob-wilson-WuD-H9IQnfg-unsplash corporate.jpg"
-                         class="service-image"
-                         alt="Corporate Travel">
+                        <p>7 Days / 6 Nights from R80,000 per person</p>
+                        <a href="./enquiry.html">Enquire About South America</a>
 
-                    <p>Contact us for a personal corporate-customized experience!</p>
+                    </article>
+
+                    <!-- World tour cruise -->
+                    <article class="service-card"
+                             data-category="cruises"
+                             data-search="world tour worldwide cruise global travel">
+
+                        <h3>World Tour</h3>
+
+                        <img src="../asserts/images/alonso-reyes-LWFdBz4d6nE-unsplash worldwide.jpg"
+                             class="service-image"
+                             alt="Worldwide travel experience"
+                             loading="lazy">
+
+                        <p>250 Days / 249 Nights from R200,000 per person</p>
+                        <a href="./enquiry.html">Enquire About World Tour</a>
+
+                    </article>
+
+                    <!-- Europe cruise -->
+                    <article class="service-card"
+                             data-category="cruises"
+                             data-search="europe cruise european destinations">
+
+                        <h3>Europe</h3>
+
+                        <img src="../asserts/images/xiaoqian-shen-dxwxPdaz1nY-unsplash europe.jpg"
+                             class="service-image"
+                             alt="European cruise travel destination"
+                             loading="lazy">
+
+                        <p>15 Days / 14 Nights from R90,000 per person</p>
+                        <a href="./enquiry.html">Enquire About Europe</a>
+
+                    </article>
 
                 </div>
+            </section>
 
-            </div>
+            <!-- Special events -->
+            <section class="service-category" aria-labelledby="eventsHeading">
+                <h2 id="eventsHeading">Special Events</h2>
 
-            <h1>Custom Travel</h1>
+                <div class="services-grid">
 
-            <div class="services-grid">
+                    <!-- Rugby World Cup travel -->
+                    <article class="service-card"
+                             data-category="events"
+                             data-search="rugby world cup south africa 2027 sports event">
 
-                <div class="service-card">
+                        <h3>Rugby World Cup</h3>
 
-                    <p>Contact us for a personal customized experience!</p>
+                        <img src="../asserts/images/james-coleman-CTEvFbFpVC8-unsplash rugby.jpg"
+                             class="service-image"
+                             alt="Rugby event travel experience"
+                             loading="lazy">
+
+                        <p>South Africa 2027</p>
+
+                        <p>
+                            Contact us for a personalised event travel
+                            experience.
+                        </p>
+
+                        <a href="./enquiry.html">Enquire About Event Travel</a>
+
+                    </article>
 
                 </div>
+            </section>
 
-            </div>
+            <!-- Corporate travel services -->
+            <section class="service-category" aria-labelledby="corporateHeading">
+                <h2 id="corporateHeading">Corporate Travel</h2>
+
+                <div class="services-grid">
+
+                    <article class="service-card"
+                             data-category="corporate"
+                             data-search="corporate business company professional travel">
+
+                        <h3>Business Travel Solutions</h3>
+
+                        <img src="../asserts/images/rob-wilson-WuD-H9IQnfg-unsplash corporate.jpg"
+                             class="service-image"
+                             alt="Corporate travel and business trip services"
+                             loading="lazy">
+
+                        <p>
+                            Travel arrangements tailored to your business
+                            requirements.
+                        </p>
+
+                        <a href="./enquiry.html">Enquire About Corporate Travel</a>
+
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Custom travel services -->
+            <section class="service-category" aria-labelledby="customHeading">
+                <h2 id="customHeading">Custom Travel</h2>
+
+                <div class="services-grid">
+
+                    <article class="service-card"
+                             data-category="custom"
+                             data-search="custom personalised tailor made travel holiday">
+
+                        <h3>Personalised Travel Experiences</h3>
+
+                        <p>
+                            Let us help you plan a trip based on your
+                            interests, preferred destination and budget.
+                        </p>
+
+                        <a href="./enquiry.html">Create Your Travel Enquiry</a>
+
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Message displayed when no packages match the search -->
+            <p id="noServicesMessage" hidden>
+                No matching travel packages were found. Try another search
+                term or select a different category.
+            </p>
+
+            <!-- General call to action -->
+            <section class="service-cta">
+    <h2>Ready to Plan Your Next Trip?</h2>
+    <p><em>Tell us your destination, travel dates and budget. Our team can help you explore suitable options.</em></p>
+    <a href="enquiry.html" class="service-cta-button">Plan My Trip</a>
+
+                <a href="./enquiry.html">Submit a Travel Enquiry</a>
+                <a href="./contact.html">Contact Our Team</a>
+            </section>
 
         </section>
 
     </main>
 
-
     <!-- Footer -->
     <footer>
 
-        <p>© 2024 Miraval Skies Travel. All rights reserved.</p>
+        <p>© <span id="copyrightYear">2026</span> Miraval Skies Travel. All rights reserved.</p>
 
+        <!-- Quick navigation links -->
         <p>
             Quick Links:
             <a href="../index.html">Home</a> |
             <a href="./about.html">About Us</a> |
             <a href="./contact.html">Contact Us</a> |
             <a href="./enquiry.html">Enquiry</a> |
-            <a href="./services.html">Services</a>
+            <a href="./services.html" aria-current="page">Services</a>
         </p>
 
+        <!-- Social media links -->
         <p>
             Social Media Links:
-            <a href="https://www.facebook.com/">Facebook</a> |
-            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.facebook.com/"
+               target="_blank" rel="noopener noreferrer">Facebook</a> |
+            <a href="https://www.instagram.com/"
+               target="_blank" rel="noopener noreferrer">Instagram</a>
         </p>
 
     </footer>
 
 </body>
-
 </html>
-
