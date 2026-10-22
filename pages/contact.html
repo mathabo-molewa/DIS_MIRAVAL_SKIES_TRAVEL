@@ -1,38 +1,48 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miraval Skies Travel | CONTACT US</title>
+
+    <!-- SEO title and description -->
+    <title>Contact Us | Miraval Skies Travel - Luxury Travel South Africa</title>
+    <meta name="description"
+          content="Contact Miraval Skies Travel in White River, South Africa, for luxury travel assistance, general enquiries, feedback and travel partnerships.">
+    <meta name="robots" content="index, follow">
 
     <!-- Link external CSS -->
     <link rel="stylesheet" href="../asserts/css/style.css">
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+
+    <!-- JavaScript file for contact form functionality -->
+    <script src="../asserts/js/contact.js" defer></script>
 </head>
+
 <body>
 
-<!--Header goes here-->
+<!-- Header goes here -->
 <header>
-
-    <!--Logo goes here-->
+    <!-- Logo goes here -->
     <img src="../asserts/images/7b50fef0-ea6f-411f-ad5a-39a434a23fa6.png"
-         alt="Miraval Skies Travel Logo" width="120">
+         alt="Miraval Skies Travel luxury travel agency logo"
+         width="120">
 
-    <!--Navigation links-->
-    <nav>
+    <!-- Navigation links -->
+    <nav aria-label="Main navigation">
         <a href="../index.html">HOME</a>
         <a href="./about.html">ABOUT US</a>
-        <a href="./contact.html">CONTACT US</a>
+        <a href="./contact.html" aria-current="page">CONTACT US</a>
         <a href="./enquiry.html">ENQUIRY</a>
         <a href="./services.html">SERVICES</a>
     </nav>
 </header>
 
-<!--Main section-->
+<!-- Main section -->
 <main>
+    <!-- Introduction to the contact page -->
     <section>
         <h1>CONTACT US</h1>
 
@@ -41,48 +51,71 @@
             in touch with us and let us help make your travel dreams
             a reality. Get in touch with our team today.
         </p>
-        <br>
+
         <hr>
     </section>
 
-    <!--Contact details-->
+    <!-- Contact details -->
     <section>
         <h2>Get In Touch</h2>
 
         <ul>
-            <li>Email: info@miravalskiestravel.com</li>
-            <li>Phone: +27 762778754</li>
+            <li>
+                Email:
+                <a href="mailto:info@miravalskiestravel.com">
+                    info@miravalskiestravel.com
+                </a>
+            </li>
+            <li>
+                Phone:
+                <a href="tel:+27762778754">+27 76 277 8754</a>
+            </li>
             <li>Hours: Monday to Friday, 9:00 AM - 5:00 PM SAST</li>
         </ul>
 
-        <br>
         <hr>
     </section>
 
-    <!--Contact form for general messages sent to the organisation-->
+    <!-- Contact form for general messages sent to the organisation -->
     <section>
         <h2>Send Us a Message</h2>
 
-        <!--Create a form to collect the customer's contact information-->
-        <form id="contactForm">
+        <p>
+            Complete the form below to prepare a message for our team.
+            All fields except the phone number are required.
+        </p>
 
-            <!--Collect the customer's name and email address-->
+        <!-- Create a form to collect the customer's contact information -->
+        <form id="contactForm" novalidate>
+
+            <!-- Collect the customer's name and email address -->
             <label for="contactName">Full Name:</label>
-            <input type="text" id="contactName" name="contactName"
+            <input type="text"
+                   id="contactName"
+                   name="contactName"
                    placeholder="Enter your full name"
-                   required minlength="2">
+                   autocomplete="name"
+                   minlength="2"
+                   required>
 
             <label for="contactEmail">Email Address:</label>
-            <input type="email" id="contactEmail" name="contactEmail"
-                   placeholder="Enter your email address" required>
+            <input type="email"
+                   id="contactEmail"
+                   name="contactEmail"
+                   placeholder="Enter your email address"
+                   autocomplete="email"
+                   required>
 
-            <!--Collect an optional phone number-->
+            <!-- Collect an optional phone number -->
             <label for="contactPhone">Phone Number (Optional):</label>
-            <input type="tel" id="contactPhone" name="contactPhone"
+            <input type="tel"
+                   id="contactPhone"
+                   name="contactPhone"
                    placeholder="e.g. +27 76 123 4567"
+                   autocomplete="tel"
                    pattern="[0-9+() -]{7,20}">
 
-            <!--Allow the customer to select the type of message-->
+            <!-- Allow the customer to select the type of message -->
             <label for="messageType">Type of Message:</label>
             <select id="messageType" name="messageType" required>
                 <option value="">Select message type</option>
@@ -90,59 +123,76 @@
                 <option value="Feedback">Feedback</option>
                 <option value="Complaint">Complaint</option>
                 <option value="Compliment">Compliment</option>
-                <option value="Partnership opportunity">Partnership opportunity</option>
+                <option value="Partnership opportunity">
+                    Partnership opportunity
+                </option>
                 <option value="Other">Other</option>
             </select>
 
-            <!--Collect the full message from the customer-->
+            <!-- Collect the full message from the customer -->
             <label for="contactMessage">Your Message:</label>
-            <textarea id="contactMessage" name="contactMessage"
+            <textarea id="contactMessage"
+                      name="contactMessage"
                       rows="7"
                       placeholder="Please enter your full message"
-                      required minlength="10"></textarea>
+                      minlength="10"
+                      required></textarea>
 
-            <!--Submission button-->
+            <!-- Submission button -->
             <button type="submit">Prepare Email</button>
-
-        <!--Close the form-->
         </form>
 
-        <!--Display confirmation and the email link after validation-->
-        <section id="contactResponse" class="form-response"
-                 aria-live="polite" hidden></section>
+        <!-- Display confirmation and the email link after validation -->
+        <section id="contactResponse"
+                 class="form-response"
+                 aria-live="polite"
+                 tabindex="-1"
+                 hidden>
+        </section>
     </section>
 
-    <!--Location details-->
+    <!-- Location details -->
     <section>
         <h2>Location Details</h2>
 
         <ul>
             <li>Address: 66 Outeniqua Street, White River, South Africa</li>
-            <li>Map: View our location on Google Maps</li>
+            <li>
+                Map:
+                <a href="https://www.google.com/maps/search/?api=1&query=66+Outeniqua+Street+White+River+South+Africa"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View our location on Google Maps
+                </a>
+            </li>
         </ul>
 
-        <!--Google maps-->
+        <!-- Google Maps location -->
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.2537345897954!2d30.996244076053486!3d-25.329265328914804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee831780346bddf%3A0x533ce3833fa1d9fc!2s66%20Outeniqua%20St%2C%20White%20River%2C%201240!5e0!3m2!1sen!2sza!4v1786087729534!5m2!1sen!2sza"
-            width="100%" height="450"
-            style="border:0;"
+            width="100%"
+            height="450"
+            style="border: 0;"
             allowfullscreen
             loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"
-            title="Map showing Miraval Skies Travel's location">
+            title="Google Maps showing 66 Outeniqua Street, White River">
         </iframe>
 
-        <br>
-        <br>
         <hr>
     </section>
 </main>
 
-<!--Footer section-->
+<!-- Footer section -->
 <footer>
-    <p>© 2024 Miraval Skies Travel. All rights reserved.</p>
+    <p>
+        © <span id="copyrightYear">2026</span>
+        Miraval Skies Travel. All rights reserved.
+    </p>
 
-    <p>Quick Links:
+    <!-- Quick links -->
+    <p>
+        Quick Links:
         <a href="../index.html">Home</a> |
         <a href="./about.html">About Us</a> |
         <a href="./contact.html">Contact Us</a> |
@@ -150,77 +200,17 @@
         <a href="./services.html">Services</a>
     </p>
 
-    <p>Social Media Links:
-        <a href="https://www.facebook.com/">Facebook</a> |
-        <a href="https://www.instagram.com/">Instagram</a>
+    <!-- Social media links -->
+    <p>
+        Social Media Links:
+        <a href="https://www.facebook.com/"
+           target="_blank"
+           rel="noopener noreferrer">Facebook</a> |
+        <a href="https://www.instagram.com/"
+           target="_blank"
+           rel="noopener noreferrer">Instagram</a>
     </p>
 </footer>
-
-<!--JavaScript for validating the contact form and preparing an email-->
-<script>
-    const contactForm = document.getElementById("contactForm");
-    const contactResponse = document.getElementById("contactResponse");
-
-  
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        if (!contactForm.reportValidity()) {
-            return;
-        }
-
-        const formData = new FormData(contactForm);
-
-        const name = formData.get("contactName").trim();
-        const email = formData.get("contactEmail").trim();
-        const phone = formData.get("contactPhone").trim();
-        const type = formData.get("messageType");
-        const message = formData.get("contactMessage").trim();
-
-      
-        const subject = type + " - Website Contact Form";
-
-        const emailBody =
-            "Name: " + name + "\n" +
-            "Email: " + email + "\n" +
-            "Phone: " + (phone || "Not provided") + "\n" +
-            "Message Type: " + type + "\n\n" +
-            "Message:\n" + message;
-
-       
-        const mailtoLink =
-            "mailto:info@miravalskiestravel.com" +
-            "?subject=" + encodeURIComponent(subject) +
-            "&body=" + encodeURIComponent(emailBody);
-
-        
-        contactResponse.replaceChildren();
-
-        const confirmation = document.createElement("p");
-        confirmation.textContent =
-            "Your message has been validated and prepared. " +
-            "Click the link below to open your email application.";
-
-        
-        const emailLink = document.createElement("a");
-        emailLink.href = mailtoLink;
-        emailLink.textContent = "Open Email to Send Message";
-
-        const note = document.createElement("p");
-        note.textContent =
-            "Your message will only be sent when you press Send " +
-            "in your email application.";
-
-        // Display the response and email link.
-        contactResponse.append(confirmation, emailLink, note);
-        contactResponse.hidden = false;
-
-        contactResponse.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
-</script>
 
 </body>
 </html>
