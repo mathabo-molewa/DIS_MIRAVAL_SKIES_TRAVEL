@@ -760,3 +760,56 @@ a:focus {
         overflow-wrap: anywhere;
     }
 }
+
+
+/* ENQUIRY PAGE AND FORM RESPONSE */
+
+.form-response {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    border: 2px solid maroon;
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    overflow-wrap: anywhere;
+}
+
+.form-response h2 {
+    color: maroon;
+}
+
+.form-response p {
+    line-height: 1.6;
+}
+
+#enquiryForm input,
+#enquiryForm select,
+#enquiryForm textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#enquiryForm button {
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+#enquiryForm button:hover,
+#enquiryForm button:focus {
+    background-color: lightpink;
+    color: maroon;
+}
+
+#enquiryForm input:focus,
+#enquiryForm select:focus,
+#enquiryForm textarea:focus {
+    outline: 2px solid maroon;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .form-response {
+        padding: 1rem;
+    }
+}
