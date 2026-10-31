@@ -1,0 +1,6 @@
+# Miraval Skies Travel crawler instructions
+User-agent: *
+Allow: /
+
+# Replace YOUR-PUBLISHED-DOMAIN after deploying the website.
+Sitemap: https://YOUR-PUBLISHED-DOMAIN/sitemap.xml

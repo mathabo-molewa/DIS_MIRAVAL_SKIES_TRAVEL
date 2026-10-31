@@ -9,6 +9,11 @@
     <meta name="description" content="Submit a travel enquiry to Miraval Skies Travel for domestic holidays, international trips, cruises and corporate travel.">
     <meta name="robots" content="index, follow">
 
+    <meta name="keywords" content="travel enquiry, travel request, domestic holidays, international trips, cruises, corporate travel, Miraval Skies Travel">
+    <meta property="og:title" content="Travel Enquiry | Miraval Skies Travel">
+    <meta property="og:description" content="Submit a travel enquiry to Miraval Skies Travel for domestic holidays, international trips, cruises and corporate travel.">
+    <meta property="og:type" content="website">
+
     <!-- Link external CSS -->
     <link rel="stylesheet" href="../asserts/css/style.css">
 
@@ -48,8 +53,14 @@
             Complete the form below to share your travel preferences.
         </p>
 
-        <!-- Enquiry form for collecting customer travel information -->
-        <form id="enquiryForm" novalidate>
+        <!--Enquiry form for collecting customer travel information-->
+        <form id="enquiryForm" 
+        action="htpp://formsubmit.co/ajax/info@miravalskiestravel.com"
+        method="POST"
+        novalidate>
+        <!--Email subject used by the form-processing service-->
+        <input type="hidden" name="subject" 
+        value="New travel enquiry from website - Miraval Skies Travel">
 
             <!-- Collect the customer's contact information -->
             <label for="name">Your Name:</label>

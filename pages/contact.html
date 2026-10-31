@@ -10,6 +10,11 @@
           content="Contact Miraval Skies Travel in White River, South Africa, for luxury travel assistance, general enquiries, feedback and travel partnerships.">
     <meta name="robots" content="index, follow">
 
+    <meta name="keywords" content="contact Miraval Skies Travel, luxury travel agency South Africa, travel assistance, general enquiries, feedback, travel partnerships">
+    <meta property="og:title" content="Contact Us | Miraval Skies Travel - Luxury Travel South Africa">
+    <meta property="og:description" content="Contact Miraval Skies Travel in White River, South Africa, for luxury travel assistance, general enquiries, feedback and travel partnerships.">
+    <meta property="og:type" content="website">
+
     <!-- Link external CSS -->
     <link rel="stylesheet" href="../asserts/css/style.css">
 
@@ -86,7 +91,15 @@
         </p>
 
         <!-- Create a form to collect the customer's contact information -->
-        <form id="contactForm" novalidate>
+        <form id="contactForm" 
+        
+        action = "htpp://formsubmit.co/ajax/info@miravalskiestravel.com" 
+        method="POST"
+        novalidate>
+
+        <!--Email subject used by the form-processing service-->
+        <input type="hidden" name="subject" 
+        value="New contact message from website - Miraval Skies Travel">
 
             <!-- Collect the customer's name and email address -->
             <label for="contactName">Full Name:</label>
@@ -198,6 +211,8 @@
     <a href="./contact.html" aria-current="page">CONTACT US</a>
     <a href="./enquiry.html">ENQUIRY</a>
     <a href="./services.html">SERVICES</a>
+
+    </p>
 
     <!-- Social media links -->
     <p>
