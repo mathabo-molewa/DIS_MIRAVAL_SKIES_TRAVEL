@@ -1,4 +1,3 @@
-html:5
 
 /*
  * Miraval Skies Travel

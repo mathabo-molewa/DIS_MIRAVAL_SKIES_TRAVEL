@@ -1,4 +1,3 @@
-html:5
 
 document.addEventListener("DOMContentLoaded", function () {
     const serviceSearch = document.getElementById("serviceSearch");

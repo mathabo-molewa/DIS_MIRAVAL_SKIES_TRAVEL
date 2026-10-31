@@ -67,7 +67,7 @@
         <ul>
             <li>
                 Email:
-                <a href="mailto:info@miravalskiestravel.com">
+                <a href="mailto:mathabo@miravalskiestravel.org">
                     info@miravalskiestravel.com
                 </a>
             </li>
@@ -81,119 +81,98 @@
         <hr>
     </section>
 
-    <!-- Contact form for general messages sent to the organisation -->
-    <section>
-        <h2>Send Us a Message</h2>
+   
+    <!-- Contact form and map side-by-side layout -->
+    <div class="contact-layout">
 
-        <p>
-            Complete the form below to prepare a message for our team.
-            All fields except the phone number are required.
-        </p>
+        <!-- Contact form for general messages -->
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
 
-        <!-- Create a form to collect the customer's contact information -->
-        <form id="contactForm" 
-        
-        action = "htpp://formsubmit.co/ajax/info@miravalskiestravel.com" 
-        method="POST"
-        novalidate>
+            <p>
+                Complete the form below to prepare a message for our team.
+                All fields except the phone number are required.
+            </p>
 
-        <!--Email subject used by the form-processing service-->
-        <input type="hidden" name="subject" 
-        value="New contact message from website - Miraval Skies Travel">
+            <form id="contactForm"
+                  action="https://formsubmit.co/ajax/info@miravalskiestravel.com"
+                  method="POST"
+                  novalidate>
 
-            <!-- Collect the customer's name and email address -->
-            <label for="contactName">Full Name:</label>
-            <input type="text"
-                   id="contactName"
-                   name="contactName"
-                   placeholder="Enter your full name"
-                   autocomplete="name"
-                   minlength="2"
-                   required>
+                <input type="hidden" name="subject"
+                       value="New contact message from website - Miraval Skies Travel">
 
-            <label for="contactEmail">Email Address:</label>
-            <input type="email"
-                   id="contactEmail"
-                   name="contactEmail"
-                   placeholder="Enter your email address"
-                   autocomplete="email"
-                   required>
+                <label for="contactName">Full Name:</label>
+                <input type="text" id="contactName" name="contactName"
+                       placeholder="Enter your full name"
+                       autocomplete="name" minlength="2" required>
 
-            <!-- Collect an optional phone number -->
-            <label for="contactPhone">Phone Number (Optional):</label>
-            <input type="tel"
-                   id="contactPhone"
-                   name="contactPhone"
-                   placeholder="e.g. +27 76 123 4567"
-                   autocomplete="tel"
-                   pattern="[0-9+() -]{7,20}">
+                <label for="contactEmail">Email Address:</label>
+                <input type="email" id="contactEmail" name="contactEmail"
+                       placeholder="Enter your email address"
+                       autocomplete="email" required>
 
-            <!-- Allow the customer to select the type of message -->
-            <label for="messageType">Type of Message:</label>
-            <select id="messageType" name="messageType" required>
-                <option value="">Select message type</option>
-                <option value="General enquiry">General enquiry</option>
-                <option value="Feedback">Feedback</option>
-                <option value="Complaint">Complaint</option>
-                <option value="Compliment">Compliment</option>
-                <option value="Partnership opportunity">
-                    Partnership opportunity
-                </option>
-                <option value="Other">Other</option>
-            </select>
+                <label for="contactPhone">Phone Number (Optional):</label>
+                <input type="tel" id="contactPhone" name="contactPhone"
+                       placeholder="e.g. +27 76 123 4567"
+                       autocomplete="tel" pattern="[0-9+() -]{7,20}">
 
-            <!-- Collect the full message from the customer -->
-            <label for="contactMessage">Your Message:</label>
-            <textarea id="contactMessage"
-                      name="contactMessage"
-                      rows="7"
-                      placeholder="Please enter your full message"
-                      minlength="10"
-                      required></textarea>
+                <label for="messageType">Type of Message:</label>
+                <select id="messageType" name="messageType" required>
+                    <option value="">Select message type</option>
+                    <option value="General enquiry">General enquiry</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Complaint">Complaint</option>
+                    <option value="Compliment">Compliment</option>
+                    <option value="Partnership opportunity">Partnership opportunity</option>
+                    <option value="Other">Other</option>
+                </select>
 
-            <!-- Submission button -->
-            <button type="submit">Prepare Email</button>
-        </form>
+                <label for="contactMessage">Your Message:</label>
+                <textarea id="contactMessage" name="contactMessage"
+                          rows="7" placeholder="Please enter your full message"
+                          minlength="10" required></textarea>
 
-        <!-- Display confirmation and the email link after validation -->
-        <section id="contactResponse"
-                 class="form-response"
-                 aria-live="polite"
-                 tabindex="-1"
-                 hidden>
+                <button type="submit">Prepare Email</button>
+            </form>
+
+            <section id="contactResponse"
+                     class="form-response"
+                     aria-live="polite"
+                     tabindex="-1"
+                     hidden>
+            </section>
         </section>
-    </section>
 
-    <!-- Location details -->
-    <section>
-        <h2>Location Details</h2>
+        <!-- Location details and Google Map -->
+        <section class="contact-map-section">
+            <h2>Location Details</h2>
 
-        <ul>
-            <li>Address: 66 Outeniqua Street, White River, South Africa</li>
-            <li>
-                Map:
+            <p>
+                Address: 66 Outeniqua Street, White River, South Africa
+            </p>
+
+            <p>
                 <a href="https://www.google.com/maps/search/?api=1&query=66+Outeniqua+Street+White+River+South+Africa"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   target="_blank" rel="noopener noreferrer">
                     View our location on Google Maps
                 </a>
-            </li>
-        </ul>
+            </p>
 
-        <!-- Google Maps location -->
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.2537345897954!2d30.996244076053486!3d-25.329265328914804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee831780346bddf%3A0x533ce3833fa1d9fc!2s66%20Outeniqua%20St%2C%20White%20River%2C%201240!5e0!3m2!1sen!2sza!4v1786087729534!5m2!1sen!2sza"
-            width="100%"
-            height="450"
-            style="border: 0;"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            title="Google Maps showing 66 Outeniqua Street, White River">
-        </iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.2537345897954!2d30.996244076053486!3d-25.329265328914804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee831780346bddf%3A0x533ce3833fa1d9fc!2s66%20Outeniqua%20St%2C%20White%20River%2C%201240!5e0!3m2!1sen!2sza!4v1786087729534!5m2!1sen!2sza"
+                width="100%"
+                height="450"
+                style="border: 0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Google Maps showing 66 Outeniqua Street, White River">
+            </iframe>
+        </section>
 
-        <hr>
-    </section>
+    </div>
+ 
 </main>
 
 <!-- Footer section -->

@@ -930,3 +930,53 @@ a:focus {
     outline: 3px solid maroon;
     outline-offset: 4px;
 }
+
+/* Contact page: form and map side by side */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+.contact-form-section,
+.contact-map-section {
+    min-width: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.contact-form-section input,
+.contact-form-section select,
+.contact-form-section textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.contact-map-section iframe {
+    display: block;
+    width: 100%;
+    min-height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Mobile and tablet layout */
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .contact-map-section iframe {
+        min-height: 350px;
+    }
+}
