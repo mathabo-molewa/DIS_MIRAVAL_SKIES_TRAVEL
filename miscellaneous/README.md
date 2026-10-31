@@ -240,4 +240,5 @@ Aug. 2026].
 •Unsplash (2019). Photo by Todd Cravens on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/blue-whale-on-sea-lwACYK8ScmA [Accessed 14 Aug. 2026].
 •Unsplash (2018). Photo by Fredrik Öhlander on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/camels-on-beach-sands-fCW1hWq2nq0 [Accessed 14 Aug. 2026].
 Sergei Bezdorozhev (2026). 7 Sitemap Examples: XML, HTML, and Visual Sitemaps. [online] available at:https://www.semrush.com/blog/sitemap-examples/ [Acessed 30 October 2026].
-
+FormSubmit (n.d.). FormSubmit. [online] Available at: https://formsubmit.co/el/create [Accessed 23 October 2026].
+GeeksforGeeks (n.d.). Robots.txt File. [online] Available at: https://www.geeksforgeeks.org/websites-apps/robots-txt-file/ [Accessed 30 October 2026].
