@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Replace YOUR-PUBLISHED-DOMAIN after deploying the website.
-Sitemap: https://YOUR-PUBLISHED-DOMAIN/sitemap.xml
+Sitemap: https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/sitemap.xml
