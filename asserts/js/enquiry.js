@@ -1,38 +1,40 @@
-html:5
+/*
+ * Miraval Skies Travel
+ * Enquiry page JavaScript functionality
+ * Features: date validation, client-side validation and AJAX submission.
+ *
+ * FormSubmit must be activated for info@miravalskiestravel.com before
+ * real submissions can be received.
+ */
 
-// Run the enquiry form functionality after the page has loaded.
 document.addEventListener("DOMContentLoaded", function () {
-
-    // Retrieve the form elements.
     const enquiryForm = document.getElementById("enquiryForm");
     const departureDate = document.getElementById("travel_dates");
     const returnDate = document.getElementById("return_date");
     const enquiryResponse = document.getElementById("enquiryResponse");
     const copyrightYear = document.getElementById("copyrightYear");
 
-    // Update the copyright year automatically.
     if (copyrightYear) {
         copyrightYear.textContent = new Date().getFullYear();
     }
 
-    // Get today's date in YYYY-MM-DD format.
+    if (!enquiryForm || !departureDate || !returnDate || !enquiryResponse) {
+        return;
+    }
+
     function getTodayString() {
         const today = new Date();
-
         return today.getFullYear() + "-" +
             String(today.getMonth() + 1).padStart(2, "0") + "-" +
             String(today.getDate()).padStart(2, "0");
     }
 
-    // Prevent customers from selecting dates in the past.
     departureDate.min = getTodayString();
     returnDate.min = getTodayString();
 
-    // Update the minimum return date when departure changes.
     departureDate.addEventListener("change", function () {
         returnDate.min = departureDate.value || getTodayString();
 
-        // Clear the return date if it is before departure.
         if (returnDate.value && returnDate.value < departureDate.value) {
             returnDate.value = "";
         }
@@ -40,41 +42,58 @@ document.addEventListener("DOMContentLoaded", function () {
         returnDate.setCustomValidity("");
     });
 
-    // Clear the return date error when the customer changes it.
     returnDate.addEventListener("change", function () {
         returnDate.setCustomValidity("");
     });
 
-    // Validate the enquiry form and prepare an email.
-    enquiryForm.addEventListener("submit", function (event) {
+    enquiryForm.querySelectorAll("input, select, textarea").forEach(function (field) {
+        field.addEventListener("input", function () {
+            field.setCustomValidity("");
+        });
+        field.addEventListener("change", function () {
+            field.setCustomValidity("");
+        });
+    });
+
+    function showResponse(message, state, headingText) {
+        enquiryResponse.replaceChildren();
+
+        if (headingText) {
+            const heading = document.createElement("h2");
+            heading.textContent = headingText;
+            enquiryResponse.appendChild(heading);
+        }
+
+        const paragraph = document.createElement("p");
+        paragraph.textContent = message;
+        enquiryResponse.appendChild(paragraph);
+
+        enquiryResponse.dataset.state = state;
+        enquiryResponse.hidden = false;
+        enquiryResponse.scrollIntoView({ behavior: "smooth", block: "start" });
+        enquiryResponse.focus();
+    }
+
+    enquiryForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        // Clear previous custom validation errors.
-        enquiryForm.querySelectorAll("input, select, textarea")
-            .forEach(function (field) {
-                field.setCustomValidity("");
-            });
-
-        // Validate the customer's name.
         const nameField = document.getElementById("name");
-        const name = nameField.value.trim();
-
-        if (name.length < 2) {
-            nameField.setCustomValidity(
-                "Please enter a name containing at least two characters."
-            );
-        }
-
-        // Validate the destination.
         const destinationField = document.getElementById("destination");
+        const name = nameField.value.trim();
+        const destination = destinationField.value.trim();
 
-        if (!destinationField.value.trim()) {
-            destinationField.setCustomValidity(
-                "Please enter your travel destination."
-            );
-        }
+        nameField.setCustomValidity(
+            name.length < 2
+                ? "Please enter a name containing at least two characters."
+                : ""
+        );
 
-        // Ensure the return date is not before departure.
+        destinationField.setCustomValidity(
+            destination.length === 0
+                ? "Please enter your travel destination."
+                : ""
+        );
+
         if (departureDate.value && returnDate.value &&
             returnDate.value < departureDate.value) {
             returnDate.setCustomValidity(
@@ -82,33 +101,69 @@ document.addEventListener("DOMContentLoaded", function () {
             );
         }
 
-        // Stop if any information is invalid.
         if (!enquiryForm.reportValidity()) {
+            enquiryResponse.hidden = true;
             return;
         }
 
+        const submitButton = enquiryForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton
+            ? submitButton.textContent
+            : "Submit Enquiry";
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+        }
+
+        showResponse("Submitting your travel enquiry. Please wait...", "pending");
+
         try {
-            // Collect the customer's submitted information.
-            const formData = new FormData(enquiryForm);
-
-            const email = formData.get("email").trim();
-            const travel = formData.get("travel");
-            const destination = formData.get("destination").trim();
-            const travellers = formData.get("Number_Travellers");
-            const departure = formData.get("travel_dates");
-            const returnTrip = formData.get("return_date");
-            const budget = Number(formData.get("budget"));
-            const currency = formData.get("currency");
-            const message = formData.get("message").trim();
-
-            // Format the travel budget.
-            const formattedBudget = budget.toLocaleString("en-ZA", {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2
+            const response = await fetch(enquiryForm.action, {
+                method: "POST",
+                body: new FormData(enquiryForm),
+                headers: { "Accept": "application/json" }
             });
 
-            // Prepare the email subject and body.
-            const subject = "Travel Enquiry - " + destination;
+            let result = {};
+            try {
+                result = await response.json();
+            } catch (parseError) {
+                throw new Error("The form service returned an unreadable response.");
+            }
+
+            if (!response.ok || result.success === false ||
+                result.success === "false" || result.success === "Failed") {
+                throw new Error(result.message || "The enquiry could not be submitted.");
+            }
+
+            const travelType = document.getElementById("travel").value;
+            showResponse(
+                "Thank you, " + name + ". Your " + travelType.toLowerCase() +
+                " travel enquiry for " + destination +
+                " has been submitted. Our team will contact you to discuss " +
+                "pricing, availability and your travel requirements. " +
+                "This enquiry is not a confirmed booking.",
+                "success",
+                "Thank You!"
+            );
+
+            enquiryForm.reset();
+            departureDate.min = getTodayString();
+            returnDate.min = getTodayString();
+
+        } catch (error) {
+            console.error("Enquiry form submission error:", error);
+
+            const formData = new FormData(enquiryForm);
+            const email = String(formData.get("email") || "").trim();
+            const travel = String(formData.get("travel") || "");
+            const travellers = String(formData.get("Number_Travellers") || "");
+            const departure = String(formData.get("travel_dates") || "");
+            const returnTrip = String(formData.get("return_date") || "");
+            const budget = String(formData.get("budget") || "");
+            const currency = String(formData.get("currency") || "");
+            const message = String(formData.get("message") || "").trim();
 
             const emailBody =
                 "NEW TRAVEL ENQUIRY - MIRAVAL SKIES TRAVEL\n\n" +
@@ -119,85 +174,41 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Number of Travellers: " + travellers + "\n" +
                 "Departure Date: " + departure + "\n" +
                 "Return Date: " + returnTrip + "\n" +
-                "Estimated Budget: " + currency + " " + formattedBudget +
-                "\n\nAdditional Requirements:\n" +
-                (message || "None provided") +
-                "\n\nPlease contact the customer to discuss pricing " +
-                "and availability. The enquiry is not a confirmed booking.";
+                "Estimated Budget: " + currency + " " + budget + "\n\n" +
+                "Additional Requirements:\n" + (message || "None provided") +
+                "\n\nThis enquiry is not a confirmed booking.";
 
-            // Create a pre-filled email addressed to the business.
-            const mailtoLink =
-                "mailto:info@miravalskiestravel.com" +
-                "?subject=" + encodeURIComponent(subject) +
+            const mailtoLink = "mailto:info@miravalskiestravel.com" +
+                "?subject=" + encodeURIComponent("Travel Enquiry - " + destination) +
                 "&body=" + encodeURIComponent(emailBody);
 
-            // Clear any previous response.
             enquiryResponse.replaceChildren();
 
-            // Display a personalised confirmation.
-            const heading = document.createElement("h2");
-            heading.textContent = "Thank You, " + name + "!";
+            const explanation = document.createElement("p");
+            explanation.textContent =
+                "We could not submit your enquiry online. You can still send it using your email application:";
 
-            const confirmation = document.createElement("p");
-            confirmation.textContent =
-                "Your " + travel.toLowerCase() +
-                " travel enquiry for " + destination +
-                " is ready to email to Miraval Skies Travel.";
-
-            // Create the link that opens the customer's email application.
             const emailLink = document.createElement("a");
             emailLink.href = mailtoLink;
-            emailLink.textContent = "Open Email to Send Enquiry";
             emailLink.className = "contact-email-link";
+            emailLink.textContent = "Open Email to Send Enquiry";
 
-            // Explain how to complete the process.
-            const nextStep = document.createElement("p");
-            nextStep.textContent =
-                "Click the link above to open your email application. " +
-                "Review the enquiry and press Send to deliver it to us. " +
-                "Your enquiry is not submitted until you send the email.";
+            const note = document.createElement("p");
+            note.textContent =
+                "Your enquiry has not been submitted through the website. " +
+                "Please press Send in your email application.";
 
-            // Display the confirmation and email link.
-            enquiryResponse.append(
-                heading,
-                confirmation,
-                emailLink,
-                nextStep
-            );
-
+            enquiryResponse.append(explanation, emailLink, note);
+            enquiryResponse.dataset.state = "error";
             enquiryResponse.hidden = false;
-
-            // Reset the form after preparing the email.
-            enquiryForm.reset();
-
-            // Restore the minimum dates after resetting.
-            departureDate.min = getTodayString();
-            returnDate.min = getTodayString();
-
-            // Scroll to the confirmation message.
-            enquiryResponse.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
+            enquiryResponse.scrollIntoView({ behavior: "smooth", block: "start" });
             enquiryResponse.focus();
 
-        } catch (error) {
-            // Display an error if the enquiry cannot be prepared.
-            enquiryResponse.replaceChildren();
-
-            const errorMessage = document.createElement("p");
-            errorMessage.textContent =
-                "Sorry, we could not prepare your enquiry email. " +
-                "Please try again or contact us at " +
-                "info@miravalskiestravel.com.";
-
-            enquiryResponse.appendChild(errorMessage);
-            enquiryResponse.hidden = false;
-            enquiryResponse.focus();
-
-            // Log the technical error for debugging.
-            console.error("Enquiry form error:", error);
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
         }
     });
 });

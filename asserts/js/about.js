@@ -1,61 +1,79 @@
 
 /*
  * Miraval Skies Travel
- * About Us page JavaScript functionality
+* About Us page JavaScript functionality
+ * Features: values interaction and accessible staff-photo lightbox.
  */
-
-// Wait until the HTML document has loaded.
 document.addEventListener("DOMContentLoaded", function () {
-
-    // Select the values button and the hidden message.
     const valuesButton = document.getElementById("valuesButton");
     const valuesMessage = document.getElementById("valuesMessage");
-
-    // Add a click event to show or hide the message.
-    valuesButton.addEventListener("click", function () {
-
-        // Check whether the message is currently visible.
-        const isExpanded =
-            valuesButton.getAttribute("aria-expanded") === "true";
-
-        // Toggle the message visibility.
-        valuesMessage.hidden = isExpanded;
-
-        // Update the accessibility state.
-        valuesButton.setAttribute("aria-expanded", String(!isExpanded));
-
-        // Update the button label.
-        valuesButton.textContent = isExpanded
-            ? "Discover Our Values"
-            : "Show Less";
-    });
-
-    // Select the copyright year in the footer.
     const copyrightYear = document.getElementById("copyrightYear");
-
-    // Update the year automatically.
-    copyrightYear.textContent = new Date().getFullYear();
-
-    // Staff photo lightbox functionality
     const staffPhotos = document.querySelectorAll(".team-member img");
     const staffLightbox = document.getElementById("staffLightbox");
     const lightboxImage = document.getElementById("lightboxImage");
 
-    staffPhotos.forEach(function (photo) {
-        photo.addEventListener("click", function () {
-            lightboxImage.src = photo.src;
-            lightboxImage.alt = photo.alt;
+    if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear();
+    }
 
-            staffLightbox.hidden = false;
-            document.body.style.overflow = "hidden";
+    if (valuesButton && valuesMessage) {
+        valuesButton.addEventListener("click", function () {
+            const isExpanded =
+                valuesButton.getAttribute("aria-expanded") === "true";
+
+            valuesMessage.hidden = isExpanded;
+            valuesButton.setAttribute("aria-expanded", String(!isExpanded));
+            valuesButton.textContent = isExpanded
+                ? "Discover Our Values"
+                : "Show Less";
         });
-    });
+    }
 
-    // Close when the expanded image or dark background is clicked
-    staffLightbox.addEventListener("click", function () {
+    if (!staffLightbox || !lightboxImage) {
+        return;
+    }
+
+    function openLightbox(photo) {
+        lightboxImage.src = photo.src;
+        lightboxImage.alt = photo.alt;
+        staffLightbox.hidden = false;
+        document.body.style.overflow = "hidden";
+        staffLightbox.setAttribute("aria-hidden", "false");
+    }
+
+    function closeLightbox() {
         staffLightbox.hidden = true;
         lightboxImage.src = "";
         document.body.style.overflow = "";
+        staffLightbox.setAttribute("aria-hidden", "true");
+    }
+
+    staffPhotos.forEach(function (photo) {
+        photo.setAttribute("tabindex", "0");
+        photo.setAttribute("role", "button");
+        photo.setAttribute("aria-label", "Enlarge " + photo.alt);
+
+        photo.addEventListener("click", function () {
+            openLightbox(photo);
+        });
+
+        photo.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openLightbox(photo);
+            }
+        });
     });
 
+    staffLightbox.addEventListener("click", function (event) {
+        if (event.target === staffLightbox || event.target === lightboxImage) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !staffLightbox.hidden) {
+            closeLightbox();
+        }
+    });
 });

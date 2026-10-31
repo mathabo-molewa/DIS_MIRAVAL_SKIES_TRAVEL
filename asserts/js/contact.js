@@ -16,32 +16,43 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactMessage = document.getElementById("contactMessage");
     const copyrightYear = document.getElementById("copyrightYear");
 
-    // Update the copyright year automatically.
     if (copyrightYear) {
         copyrightYear.textContent = new Date().getFullYear();
     }
 
-    // Clear custom validation messages as the user corrects their input.
-    [contactName, contactEmail, contactPhone, messageType, contactMessage]
-        .forEach(function (field) {
-            field.addEventListener("input", function () {
-                field.setCustomValidity("");
-            });
+    if (!contactForm || !contactResponse) {
+        return;
+    }
 
-            field.addEventListener("change", function () {
-                field.setCustomValidity("");
-            });
+    const fields = [
+        contactName, contactEmail, contactPhone, messageType, contactMessage
+    ].filter(Boolean);
+
+    fields.forEach(function (field) {
+        field.addEventListener("input", function () {
+            field.setCustomValidity("");
         });
 
-    // Validate the contact form and prepare an email.
-    contactForm.addEventListener("submit", function (event) {
+        field.addEventListener("change", function () {
+            field.setCustomValidity("");
+        });
+    });
+
+    function showResponse(message, state) {
+        contactResponse.replaceChildren();
+        const paragraph = document.createElement("p");
+        paragraph.textContent = message;
+        contactResponse.appendChild(paragraph);
+        contactResponse.dataset.state = state;
+        contactResponse.hidden = false;
+        contactResponse.scrollIntoView({ behavior: "smooth", block: "start" });
+        contactResponse.focus();
+    }
+
+    contactForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        // Prevent names and messages made only of spaces.
         const name = contactName.value.trim();
-        const email = contactEmail.value.trim();
-        const phone = contactPhone.value.trim();
-        const type = messageType.value;
         const message = contactMessage.value.trim();
 
         contactName.setCustomValidity(
@@ -56,68 +67,97 @@ document.addEventListener("DOMContentLoaded", function () {
                 : ""
         );
 
-        // Display browser validation messages if any field is invalid.
         if (!contactForm.reportValidity()) {
             contactResponse.hidden = true;
             return;
         }
 
-        // Prepare the email subject and body.
-        const subject = type + " - Website Contact Form";
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton
+            ? submitButton.textContent
+            : "Send Message";
 
-        const emailBody =
-            "Name: " + name + "\n" +
-            "Email: " + email + "\n" +
-            "Phone: " + (phone || "Not provided") + "\n" +
-            "Message Type: " + type + "\n\n" +
-            "Message:\n" + message;
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+        }
 
-        // Encode the information for a mailto link.
-        const mailtoLink =
-            "mailto:info@miravalskiestravel.com" +
-            "?subject=" + encodeURIComponent(subject) +
-            "&body=" + encodeURIComponent(emailBody);
+        showResponse("Sending your message. Please wait...", "pending");
 
-        // Clear any previous response.
-        contactResponse.replaceChildren();
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: { "Accept": "application/json" }
+            });
 
-        // Create confirmation text.
-        const confirmation = document.createElement("p");
-        confirmation.textContent =
-            "Your message has passed validation and is ready to be prepared.";
+            let result = {};
+            try {
+                result = await response.json();
+            } catch (parseError) {
+                throw new Error("The form service returned an unreadable response.");
+            }
 
-        // Create a link that opens the visitor's email application.
-        const emailLink = document.createElement("a");
-        emailLink.href = mailtoLink;
-        emailLink.textContent = "Open Email to Send Message";
-        emailLink.className = "contact-email-link";
+            if (!response.ok || result.success === false ||
+                result.success === "false" || result.success === "Failed") {
+                throw new Error(result.message || "The message could not be submitted.");
+            }
 
-        // Explain that the email is not sent automatically.
-        const note = document.createElement("p");
-        note.textContent =
-            "Review your message in your email application and press Send " +
-            "to deliver it. This website does not send the email automatically.";
+            showResponse(
+                "Thank you, " + name +
+                ". Your message has been submitted successfully. " +
+                "Our team will review it and respond using the email address provided.",
+                "success"
+            );
 
-        
-        // Add the response to the page.
-        contactResponse.append(confirmation, emailLink, note);
-        contactResponse.hidden = false;
-
-        // Reset the form after preparing the email.
-        contactForm.reset();
-
-        // Clear any custom validation messages.
-        [contactName, contactEmail, contactPhone, messageType, contactMessage]
-            .forEach(function (field) {
+            contactForm.reset();
+            fields.forEach(function (field) {
                 field.setCustomValidity("");
             });
 
-        // Move the visitor to the confirmation message.
-        contactResponse.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+        } catch (error) {
+            console.error("Contact form submission error:", error);
 
-        contactResponse.focus();
+            // Offer a mailto fallback if the AJAX service is unavailable.
+            const subject = messageType.value + " - Website Contact Form";
+            const emailBody =
+                "Name: " + name + "\n" +
+                "Email: " + contactEmail.value.trim() + "\n" +
+                "Phone: " + (contactPhone.value.trim() || "Not provided") + "\n" +
+                "Message Type: " + messageType.value + "\n\n" +
+                "Message:\n" + message;
+
+            const mailtoLink = "mailto:info@miravalskiestravel.com" +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(emailBody);
+
+            contactResponse.replaceChildren();
+
+            const explanation = document.createElement("p");
+            explanation.textContent =
+                "We could not submit your message online. You can still send it using your email application:";
+
+            const emailLink = document.createElement("a");
+            emailLink.href = mailtoLink;
+            emailLink.className = "contact-email-link";
+            emailLink.textContent = "Open Email to Send Message";
+
+            const note = document.createElement("p");
+            note.textContent =
+                "Your message has not been submitted through the website. " +
+                "Please press Send in your email application.";
+
+            contactResponse.append(explanation, emailLink, note);
+            contactResponse.dataset.state = "error";
+            contactResponse.hidden = false;
+            contactResponse.scrollIntoView({ behavior: "smooth", block: "start" });
+            contactResponse.focus();
+
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
+        }
     });
-}); 
+});
