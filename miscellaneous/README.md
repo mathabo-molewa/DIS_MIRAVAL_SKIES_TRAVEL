@@ -241,4 +241,7 @@ Aug. 2026].
 •Unsplash (2018). Photo by Fredrik Öhlander on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/camels-on-beach-sands-fCW1hWq2nq0 [Accessed 14 Aug. 2026].
 Sergei Bezdorozhev (2026). 7 Sitemap Examples: XML, HTML, and Visual Sitemaps. [online] available at:https://www.semrush.com/blog/sitemap-examples/ [Acessed 30 October 2026].
 FormSubmit (n.d.). FormSubmit. [online] Available at: https://formsubmit.co/el/create [Accessed 23 October 2026].
-GeeksforGeeks (n.d.). Robots.txt File. [online] Available at: https://www.geeksforgeeks.org/websites-apps/robots-txt-file/ [Accessed 30 October 2026].
+GeeksforGeeks (2025). Robots.txt File. [online] Available at: https://www.geeksforgeeks.org/websites-apps/robots-txt-file/ [Accessed 30 October 2026].
+GeeksforGeeks (2026). Form Validation Using JavaScript. [online] Available at: https://www.geeksforgeeks.org/javascript/form-validation-using-javascript/ [Accessed 31 October 2026].
+W3Schools (n.d.). JavaScript HTML DOM. [online] Available at: https://www.w3schools.com/js/js_htmldom.asp [Accessed 31 October 2026].
+SE Ranking (2024). Title Tags and Meta Descriptions in SEO. [online] Available at: https://seranking.com/blog/title-tags-and-meta-descriptions-in-seo/ [Accessed 31 October 2026].
