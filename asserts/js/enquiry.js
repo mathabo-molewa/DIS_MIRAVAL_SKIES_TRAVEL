@@ -3,7 +3,7 @@
  * Enquiry page JavaScript functionality
  * Features: date validation, client-side validation and AJAX submission.
  *
- * FormSubmit must be activated for info@miravalskiestravel.com before
+ * FormSubmit must be activated for mathabo@miravalskiestravel.org before
  * real submissions can be received.
  */
 
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Additional Requirements:\n" + (message || "None provided") +
                 "\n\nThis enquiry is not a confirmed booking.";
 
-            const mailtoLink = "mailto:info@miravalskiestravel.com" +
+            const mailtoLink = "mailto:mathabo@miravalskiestravel.org" +
                 "?subject=" + encodeURIComponent("Travel Enquiry - " + destination) +
                 "&body=" + encodeURIComponent(emailBody);
 

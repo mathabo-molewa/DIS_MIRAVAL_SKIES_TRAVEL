@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Message Type: " + messageType.value + "\n\n" +
                 "Message:\n" + message;
 
-            const mailtoLink = "mailto:info@miravalskiestravel.com" +
+            const mailtoLink = "mailto:mathabo@miravalskiestravel.org" +
                 "?subject=" + encodeURIComponent(subject) +
                 "&body=" + encodeURIComponent(emailBody);
 

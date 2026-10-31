@@ -57,7 +57,7 @@ The Contact form collects a customer's name, email address, optional phone numbe
 
 The Enquiry form collects the customer's name and email, travel type, destination, number of travellers, departure and return dates, budget, currency and optional additional requirements.
 
-Both forms use client-side JavaScript validation and send the form data asynchronously to the FormSubmit AJAX endpoint. The recipient address configured in the code is `info@miravalskiestravel.com`
+Both forms use client-side JavaScript validation and send the form data asynchronously to the FormSubmit AJAX endpoint. The recipient address configured in the code is `mathabo@miravalskiestravel.org`
 
 ## Search engine optimisation
 
@@ -213,6 +213,18 @@ Added visual styling, hover, focus effects, responsive css styling - 17 Septembe
 Tested the website -18 September 2026
 Added the screenshots to README -18 September 2026
 Finish part 2 -18 September 2026
+Begin part 3 - 09 October 2026
+Added JavaScript functionality for interactive website elements
+Add service search and filtering
+Add staff image lightbox
+Contact form validation and AJAX submission
+Enquiry for validation and AJAX submission
+Travel date validation
+Created robots.txt and sitemap.xml
+Added SEO titles, meta descriptions
+Tested contact and enquiry form submission
+Due date of project: 2 November
+
 ## References
 
 •ASWD (2017). How Much Does a Website Design Cost in South Africa? | 
@@ -227,5 +239,5 @@ Aug. 2026].
 •Tomaseti, D. (2020). zebra standing on green grass during daytime. [online] Unsplash.com. Unsplash. Available at: https://unsplash.com/photos/zebra-standing-on-green-grass-during-daytime-Vw2HZQ1FGjU [Accessed 14 Aug. 2026].
 •Unsplash (2019). Photo by Todd Cravens on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/blue-whale-on-sea-lwACYK8ScmA [Accessed 14 Aug. 2026].
 •Unsplash (2018). Photo by Fredrik Öhlander on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/camels-on-beach-sands-fCW1hWq2nq0 [Accessed 14 Aug. 2026].
-
+Sergei Bezdorozhev (2026). 7 Sitemap Examples: XML, HTML, and Visual Sitemaps. [online] available at:https://www.semrush.com/blog/sitemap-examples/ [Acessed 30 October 2026].
 
