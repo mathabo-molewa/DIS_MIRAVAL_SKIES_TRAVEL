@@ -10,10 +10,10 @@ Programme: Diploma in IT: Software Development
 Project: Miraval Skies Travel
 
 ## Project overview
-Miraval Skies Travel is a luxury travel agency that needs a website created for customer engagement by providing them with easy to use features. The website alows visitors to explore domestic and international travel packages, cruises, corporate travel and customised travel experiences. It also provides separate contact and travel enquiry forms.
+Miraval Skies Travel is a luxury travel agency that needs a website created for customer engagement by providing them with easy to use features. The website allows visitors to explore domestic and international travel packages, cruises, corporate travel and customised travel experiences. It also provides separate contact and travel enquiry forms.
 
 ## Goals and objectives
-- It is too give the ultimate luxury experience to all the clients as well as exceptional customer services.
+- It is to give the ultimate luxury experience to all the clients as well as exceptional customer services.
 - Present the organisation and its services clearly.
 - Allow customers to search and filter travel packages.
 - Allow customers to submit general messages and travel enquiries.
@@ -70,34 +70,39 @@ The website includes:
 - Mobile viewport metadata and responsive CSS.
 - `robots.txt` to provide crawler instructions.
 - `sitemap.xml` listing the five website pages.
+
+https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/sitemap.xml
+
+
+
 ## Responsive design
 
-The stylesheet includes responsive layouts and media queries for different screen widths. The website should be tested at desktop, tablet and mobile sizes. Check that navigation, forms, images, service cards and the footer remain usable at each size.
+The stylesheet includes responsive layouts and media queries for different screen widths. The website was be tested at desktop, tablet and mobile sizes. The navigation, forms, images, service cards and the footer remain usable at each size.
 
 ## Testing checklist
 
 Record the actual results and dates when testing the completed website.
 
-- [ ] Open all five pages and check navigation links.
-- [ ] Test the homepage discovery button.
-- [ ] Test the About page values button.
-- [ ] Open each staff image and close the lightbox using the background, image and Escape key.
-- [ ] Search for destinations on the Services page.
-- [ ] Test every category filter and the no-results message.
-- [ ] Submit the Contact form with empty and invalid values.
-- [ ] Submit the Contact form with valid values and confirm the message reaches the recipient.
-- [ ] Submit the Enquiry form with invalid and valid values.
-- [ ] Confirm that past dates cannot be selected and the return date cannot be before departure.
-- [ ] Test the website at desktop, tablet and mobile widths.
-- [ ] Check image loading, broken links and browser console errors.
-- [ ] Test the published website after deployment.
+- [yes ] Open all five pages and check navigation links.
+- [yes ] Test the homepage discovery button.
+- [ yes] Test the About page values button.
+- [yes ] Open each staff image and close the lightbox using the background, image and Escape key.
+- [yes ] Search for destinations on the Services page.
+- [yes ] Test every category filter and the no-results message.
+- [yes ] Submit the Contact form with empty and invalid values.
+- [ yes] Submit the Contact form with valid values and confirm the message reaches the recipient.
+- [yes ] Submit the Enquiry form with invalid and valid values.
+- [yes ] Confirm that past dates cannot be selected and the return date cannot be before departure.
+- [ yes] Test the website at desktop, tablet and mobile widths.
+- [ yes] Check image loading, broken links and browser console errors.
+- [yes ] Test the published website after deployment.
 
 ## Deployment
 
 The website is intended to be deployed using a free static hosting platform such as GitHub Pages or Netlify.
 
-- **GitHub repository:** Add the final repository URL here.
-- **Published website:** Add the final deployed website URL here.
+-  https://github.com/mathabo-molewa/DIS_MIRAVAL_SKIES_TRAVEL : Add the final repository URL here.
+- https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/ : Add the final deployed website URL here.
 
 ## Project structure
 MiravalSkiesTravel/
@@ -140,7 +145,8 @@ Add a site map on the proposal - 14 September 2026
 Apply desktop CSS styling - 17 September 2026
 Begin part 3 - 9 October 2026
 Check form for Ice Task - 9 October 2026
-
+Open robot.txt and Sitemap - 30 October 2026
+Submission date: 2 November 2026
 
 
 ## Sitemap
@@ -178,6 +184,9 @@ Using an external CSS stylesheet, it was linked to all the webpages.
 - Added submission progress, success and error feedback, with an email-application fallback if online submission fails.
 - Improved keyboard focus indicators and reduced-motion support.
 - Updated this README with Part 3 functionality, SEO, form setup and testing requirements.
+- Tested the forms
+- Checked Links and brower console errors
+- Tested published website across different screen sizes
 
 
 -Desktop
@@ -239,7 +248,7 @@ Aug. 2026].
 •Tomaseti, D. (2020). zebra standing on green grass during daytime. [online] Unsplash.com. Unsplash. Available at: https://unsplash.com/photos/zebra-standing-on-green-grass-during-daytime-Vw2HZQ1FGjU [Accessed 14 Aug. 2026].
 •Unsplash (2019). Photo by Todd Cravens on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/blue-whale-on-sea-lwACYK8ScmA [Accessed 14 Aug. 2026].
 •Unsplash (2018). Photo by Fredrik Öhlander on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/camels-on-beach-sands-fCW1hWq2nq0 [Accessed 14 Aug. 2026].
-Sergei Bezdorozhev (2026). 7 Sitemap Examples: XML, HTML, and Visual Sitemaps. [online] available at:https://www.semrush.com/blog/sitemap-examples/ [Acessed 30 October 2026].
+Sergei Bezdorozhev (2026). 7 Sitemap Examples: XML, HTML, and Visual Sitemaps. [online] available at:https://www.semrush.com/blog/sitemap-examples/ [Accessed 30 October 2026].
 FormSubmit (n.d.). FormSubmit. [online] Available at: https://formsubmit.co/el/create [Accessed 23 October 2026].
 GeeksforGeeks (2025). Robots.txt File. [online] Available at: https://www.geeksforgeeks.org/websites-apps/robots-txt-file/ [Accessed 30 October 2026].
 GeeksforGeeks (2026). Form Validation Using JavaScript. [online] Available at: https://www.geeksforgeeks.org/javascript/form-validation-using-javascript/ [Accessed 31 October 2026].
