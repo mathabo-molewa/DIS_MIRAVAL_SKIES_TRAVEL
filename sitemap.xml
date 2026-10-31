@@ -1,18 +1,19 @@
-<!--  Replace YOUR-PUBLISHED-DOMAIN with the final HTTPS website address after deployment.  -->
+
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://YOUR-PUBLISHED-DOMAIN/</loc>
-</url>
-<url>
-<loc>https://YOUR-PUBLISHED-DOMAIN/pages/about.html</loc>
-</url>
-<url>
-<loc>https://YOUR-PUBLISHED-DOMAIN/pages/contact.html</loc>
-</url>
-<url>
-<loc>https://YOUR-PUBLISHED-DOMAIN/pages/enquiry.html</loc>
-</url>
-<url>
-<loc>https://YOUR-PUBLISHED-DOMAIN/pages/services.html</loc>
-</url>
+    <url>
+        <loc>https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/</loc>
+    </url>
+    <url>
+        <loc>https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/pages/about.html</loc>
+    </url>
+    <url>
+        <loc>https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/pages/contact.html</loc>
+    </url>
+    <url>
+        <loc>https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/pages/enquiry.html</loc>
+    </url>
+    <url>
+        <loc>https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/pages/services.html</loc>
+    </url>
 </urlset>
