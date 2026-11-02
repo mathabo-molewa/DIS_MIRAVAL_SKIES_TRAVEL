@@ -208,10 +208,10 @@ footer a:active {
     margin-bottom: 15px;
 }
 
-.team img {
-    width: 80%;
-    max-width: 300px;
-    height: auto;
+.team-member img {
+    width: 100%;
+    height: 350px;
+    object-position: center;
     object-fit: cover;
     border: 6px solid white;
     border-radius: 20px;
