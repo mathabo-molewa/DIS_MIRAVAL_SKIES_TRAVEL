@@ -174,6 +174,16 @@ Using an external CSS stylesheet, it was linked to all the webpages.
 -Responsive navigation
 -Content Adjustments using media queries
 
+## Part 2 Feedback and Improvements
+
+The feedback received for Part 2 was reviewed and used to improve the project documentation and presentation.
+
+The following improvements were made:
+
+- **README documentation:** Expanded the README to include additional project information, functionality, testing, deployment, project structure and development details.
+- **Changelog:** Improved the development record to document the work completed during Part 2 and Part 3 more clearly.
+- **References:** Reviewed and reformatted the references to improve consistency and readability.
+
 ### Part 3 – Functionality and SEO
 - Added page-specific SEO titles, descriptions, keyword metadata and Open Graph metadata.
 - Added `robots.txt` and `sitemap.xml` files. The published domain must be inserted after deployment.
@@ -236,21 +246,28 @@ Due date of project: 2 November
 
 ## References
 
-•ASWD (2017). How Much Does a Website Design Cost in South Africa? | 
-Web Design Prices. [online] Advertising Solutions Web Design. Available at: 
-https://advertisingsolutions.co.za/website-design-cost-south-africa/ [Accessed 
-5 Aug. 2026]. 
-• 2025 Average Website Maintenance Costs In South Africa. (2025). 
-[online] Allanux Web Blog. Available at: 
-https://www.allanuxweb.com/blog/website-maintenance-costs [Accessed 5 
-Aug. 2026].
-•Reich, T. (2020). brown rocky mountain beside sea during daytime. [online] Unsplash.com. Unsplash. Available at: https://unsplash.com/photos/brown-rocky-mountain-beside-sea-during-daytime--7ZwuyDx2rI [Accessed 14 Aug. 2026].
-•Tomaseti, D. (2020). zebra standing on green grass during daytime. [online] Unsplash.com. Unsplash. Available at: https://unsplash.com/photos/zebra-standing-on-green-grass-during-daytime-Vw2HZQ1FGjU [Accessed 14 Aug. 2026].
-•Unsplash (2019). Photo by Todd Cravens on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/blue-whale-on-sea-lwACYK8ScmA [Accessed 14 Aug. 2026].
-•Unsplash (2018). Photo by Fredrik Öhlander on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/camels-on-beach-sands-fCW1hWq2nq0 [Accessed 14 Aug. 2026].
-Sergei Bezdorozhev (2026). 7 Sitemap Examples: XML, HTML, and Visual Sitemaps. [online] available at:https://www.semrush.com/blog/sitemap-examples/ [Accessed 30 October 2026].
-FormSubmit (n.d.). FormSubmit. [online] Available at: https://formsubmit.co/el/create [Accessed 23 October 2026].
-GeeksforGeeks (2025). Robots.txt File. [online] Available at: https://www.geeksforgeeks.org/websites-apps/robots-txt-file/ [Accessed 30 October 2026].
-GeeksforGeeks (2026). Form Validation Using JavaScript. [online] Available at: https://www.geeksforgeeks.org/javascript/form-validation-using-javascript/ [Accessed 31 October 2026].
-W3Schools (n.d.). JavaScript HTML DOM. [online] Available at: https://www.w3schools.com/js/js_htmldom.asp [Accessed 31 October 2026].
-SE Ranking (2024). Title Tags and Meta Descriptions in SEO. [online] Available at: https://seranking.com/blog/title-tags-and-meta-descriptions-in-seo/ [Accessed 31 October 2026].
+## References
+
+2025 Average Website Maintenance Costs in South Africa (2025). [online] Allanux Web Blog. Available at: https://www.allanuxweb.com/blog/website-maintenance-costs [Accessed 5 Aug. 2026].
+
+ASWD (2017). How Much Does a Website Design Cost in South Africa? | Web Design Prices. [online] Advertising Solutions Web Design. Available at: https://advertisingsolutions.co.za/website-design-cost-south-africa/ [Accessed 5 Aug. 2026].
+
+Bezdorozhev, S. (2026). 7 Sitemap Examples: XML, HTML, and Visual Sitemaps. [online] Semrush. Available at: https://www.semrush.com/blog/sitemap-examples/ [Accessed 30 Oct. 2026].
+
+FormSubmit (n.d.). FormSubmit. [online] Available at: https://formsubmit.co/el/create [Accessed 23 Oct. 2026].
+
+GeeksforGeeks (2025). Robots.txt File. [online] Available at: https://www.geeksforgeeks.org/websites-apps/robots-txt-file/ [Accessed 30 Oct. 2026].
+
+GeeksforGeeks (2026). Form Validation Using JavaScript*. [online] Available at: https://www.geeksforgeeks.org/javascript/form-validation-using-javascript/ [Accessed 31 Oct. 2026].
+
+Reich, T. (2020). Brown rocky mountain beside sea during daytime. [online] Unsplash. Available at: https://unsplash.com/photos/brown-rocky-mountain-beside-sea-during-daytime--7ZwuyDx2rI [Accessed 14 Aug. 2026].
+
+SE Ranking (2024). Title Tags and Meta Descriptions in SEO. [online] Available at: https://seranking.com/blog/title-tags-and-meta-descriptions-in-seo/ [Accessed 31 Oct. 2026].
+
+Tomaseti, D. (2020). Zebra standing on green grass during daytime. [online] Unsplash. Available at: https://unsplash.com/photos/zebra-standing-on-green-grass-during-daytime-Vw2HZQ1FGjU [Accessed 14 Aug. 2026].
+
+Unsplash (2018). Photo by Fredrik Öhlander on Unsplash. [online] Available at: https://unsplash.com/photos/camels-on-beach-sands-fCW1hWq2nq0 [Accessed 14 Aug. 2026].
+
+Unsplash (2019). Photo by Todd Cravens on Unsplash. [online] Available at: https://unsplash.com/photos/blue-whale-on-sea-lwACYK8ScmA [Accessed 14 Aug. 2026].
+
+W3Schools (n.d.). JavaScript HTML DOM. [online] Available at: https://www.w3schools.com/js/js_htmldom.asp [Accessed 31 Oct. 2026].
