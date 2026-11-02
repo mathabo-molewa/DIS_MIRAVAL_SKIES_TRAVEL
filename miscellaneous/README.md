@@ -38,7 +38,7 @@ The website has 5 pages (home, about us, enquiry, contact us and services). Each
 - Google Fonts
 - Google Maps embed
 - GitHub and GitHub Desktop
-- FormSubmit AJAX endpoint for form processing (requires email activation and live testing)
+- FormSubmit AJAX endpoint for form processing 
 
 ## JavaScript functionality
 
@@ -97,12 +97,20 @@ Record the actual results and dates when testing the completed website.
 - [ yes] Check image loading, broken links and browser console errors.
 - [yes ] Test the published website after deployment.
 
+### Testing Results
+
+The website was tested across desktop, tablet and mobile screen sizes. Navigation links, interactive JavaScript elements, service search and filtering, and both forms were tested.
+
+The Contact and Enquiry forms were tested using invalid and valid inputs. Form submissions were checked to confirm that the configured submission process worked.
+
+The published website was also checked for broken links, image-loading issues and browser console errors.
+
 ## Deployment
 
-The website is intended to be deployed using a free static hosting platform such as GitHub Pages or Netlify.
+The website is deployed and published using a free static hosting platform, GitHub Pages 
 
--  https://github.com/mathabo-molewa/DIS_MIRAVAL_SKIES_TRAVEL : Add the final repository URL here.
-- https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/ : Add the final deployed website URL here.
+-  https://github.com/mathabo-molewa/DIS_MIRAVAL_SKIES_TRAVEL 
+- https://mathabo-molewa.github.io/DIS_MIRAVAL_SKIES_TRAVEL/ 
 
 ## Project structure
 MiravalSkiesTravel/
@@ -158,18 +166,18 @@ About us   Contact us   Enquiry   Services
 
 ##  Part 2 Details
 
-Part two takes a focus on the visual aspect and responsive styling for the website.
+Part two focused on the visual aspect and responsive styling for the website.
 Using an external CSS stylesheet, it was linked to all the webpages.
 -Base styling 
 -Consistent colour theme
 -Typography and font styling
--Header and nagivation styling
+-Header and navigation styling
 -Submit button styling and hover effects
 -Borders, rounded corners and box shadows
--Flexbox
--CSS Grid
+-Flexbox layouts
+-CSS Grid layouts
 -Responsive design for desktop, tablet and mobile screens
--Reponsive layout and image adjustments
+-Responsive layout and image adjustments
 -Form styling for enquiry page
 -Responsive navigation
 -Content Adjustments using media queries
@@ -242,9 +250,7 @@ Travel date validation
 Created robots.txt and sitemap.xml
 Added SEO titles, meta descriptions
 Tested contact and enquiry form submission
-Due date of project: 2 November
-
-## References
+Due date of project = 2 November 2026
 
 ## References
 
